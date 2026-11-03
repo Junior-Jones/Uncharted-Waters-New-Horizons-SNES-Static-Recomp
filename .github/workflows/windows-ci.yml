@@ -37,7 +37,7 @@ jobs:
             mingw-w64-x86_64-cmake
             mingw-w64-x86_64-ninja
             mingw-w64-x86_64-python
-      - name: Check portable source and source manifest
+      - name: Check portable source
         run: python tools/check_portable_source.py
       - name: Configure the complete compacted application
         run: >-
