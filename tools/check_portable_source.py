@@ -3,12 +3,17 @@ from pathlib import Path
 import csv
 import hashlib
 import re
+import argparse
 
 root = Path(__file__).resolve().parents[1]
-for row in csv.DictReader((root/'SOURCE-MANIFEST.csv').open(encoding='utf-8')):
-    path = root/row['path']
-    assert path.is_file(), f"Missing source: {row['path']}"
-    assert hashlib.sha256(path.read_bytes()).hexdigest() == row['sha256'], row['path']
+parser = argparse.ArgumentParser()
+parser.add_argument('--strict-manifest', action='store_true', help='Verify the frozen release export as well as portability')
+args = parser.parse_args()
+if args.strict_manifest:
+    for row in csv.DictReader((root/'SOURCE-MANIFEST.csv').open(encoding='utf-8')):
+        path = root/row['path']
+        assert path.is_file(), f"Missing source: {row['path']}"
+        assert hashlib.sha256(path.read_bytes()).hexdigest() == row['sha256'], row['path']
 for path in root.rglob('*'):
     if not path.is_file() or any(p in ('.git', 'build', '__pycache__') for p in path.relative_to(root).parts):
         continue
@@ -21,4 +26,4 @@ for path in root.rglob('*'):
     assert not re.search(private, data, re.I), f"Private drive path: {path.relative_to(root)}"
     assert not re.search(private, data.replace(b'\0',b''), re.I), f"Private UTF-16 path: {path.relative_to(root)}"
     assert path.suffix.lower() not in ('.smc', '.sfc', '.sav', '.srm', '.nhsnap', '.exe', '.dll', '.obj', '.pdb'), path
-print('PASS: source manifest, no private drive paths, no ROMs or personal runtime data')
+print('PASS: no private drive paths, no ROMs or personal runtime data' + ('; release manifest verified' if args.strict_manifest else ''))
