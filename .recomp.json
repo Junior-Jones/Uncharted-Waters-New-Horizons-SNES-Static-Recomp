@@ -1,0 +1,37 @@
+{
+  "$schema": "https://recomp.fyi/schema/v1.json",
+  "game": "Uncharted Waters: New Horizons",
+  "project": "Uncharted Waters: New Horizons (SNES) Static Recompilation",
+  "system": "SNES",
+  "type": "recomp",
+  "original": {
+    "region": "USA/Canada"
+  },
+  "status": "released",
+  "targets": [
+    "Windows"
+  ],
+  "toolchain": "Unspecified",
+  "approach": "Custom static recompilation into fixed native C bodies preserving exact execution contexts, with a native Windows frontend and target-owned SNES runtime.",
+  "maintainers": [
+    {
+      "name": "Junior-Jones",
+      "link": "https://github.com/Junior-Jones"
+    }
+  ],
+  "links": [
+    {
+      "label": "Repository",
+      "url": "https://github.com/Junior-Jones/Uncharted-Waters-New-Horizons-SNES-Static-Recomp"
+    },
+    {
+      "label": "Running and building instructions",
+      "url": "https://github.com/Junior-Jones/Uncharted-Waters-New-Horizons-SNES-Static-Recomp/blob/main/README.md"
+    },
+    {
+      "label": "Windows x64 release",
+      "url": "https://github.com/Junior-Jones/Uncharted-Waters-New-Horizons-SNES-Static-Recomp/releases/tag/v1.0.0"
+    }
+  ],
+  "notes": "Portable Windows 10/11 x64 release with keyboard and gamepad input, in-game battery saves, snapshots and audio. Optional 16:9 widescreen is experimental, disabled by default and only partially qualified; unsupported scenes retain their original layout. Release checks are scoped smoke, control and snapshot/reset checks, not a complete playthrough or exhaustive gameplay/audio certification."
+}
