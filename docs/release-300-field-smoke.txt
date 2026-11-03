@@ -1,0 +1,8 @@
+START natural guest fields; same frontend adapter; no wall-clock pacing/device
+PRESENTATION requested=0; no guest advancement
+EXPECT final unsupported scene retains original native layout
+STEP 0 fields=300
+HOST step=0 avg_ms=10.038 max_ms=18.183 unpaced_fps=99.63 target_budget_ms=16.639 (core+adapter+PCM drain; not device/paint acceptance)
+PASS expected native scene: ON/OFF original256x239 pixels/layout exact; no guest frame/instruction advancement
+fields=300 pcm_frames=159661 pcm_fnv1a64=12804083EE0A25B5
+EXIT 0

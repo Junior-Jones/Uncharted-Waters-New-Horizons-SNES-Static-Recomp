@@ -1,0 +1,221 @@
+{
+  "schema": "new-horizons-v18c-release-symbol-split-v1",
+  "status": "PASS_NONDEBUG_SECTION_BYTES_AND_LOADER_ABI_IDENTICAL",
+  "input": "./build/v18c-shared-gcc/release/Launcher.exe",
+  "output": "historical-workspace/temp/release-1.0.0-20261103-reset/Launcher.exe",
+  "symbols": "historical-workspace/temp/release-1.0.0-20261103-reset/Launcher.debug",
+  "commands": [
+    [
+      "C:\\msys64\\mingw64\\bin\\objcopy.exe",
+      "--only-keep-debug",
+      "./build/v18c-shared-gcc/release/Launcher.exe",
+      "..\\release-1.0.0-20261103-reset\\Launcher.debug"
+    ],
+    [
+      "C:\\msys64\\mingw64\\bin\\strip.exe",
+      "--strip-all",
+      "-o",
+      "..\\release-1.0.0-20261103-reset\\Launcher.exe",
+      "./build/v18c-shared-gcc/release/Launcher.exe"
+    ]
+  ],
+  "tool_sha256": "2eb4a894fbe778fb8840e26abd4bfcf65aa07d4e4aa896ef6635a7c2504f9494",
+  "strip_sha256": "2b090bcf7fe5520404bff79b795f7a0c8f49c8e753169a38cee213ccfc83f5ef",
+  "objcopy_sha256": "095c47300cb4953b13a0557b029b5325fa06a105c447fca2aa9873c6a8c31818",
+  "input_sha256": "35472a69607b5141eeacf996efe3ab4d3a674aaaf95b31c13b2844eb1a6e34bb",
+  "output_sha256": "b23d257b5ebad16080b5c5debf49318df8aa47fe82995d7e050faa7f802d8bc4",
+  "symbols_sha256": "460007b8a48affe570bddee7d71f42806279e214a0e4c0e286e8ec10f34a9f5d",
+  "bytes_before": 27737782,
+  "bytes_after": 25253888,
+  "bytes_removed": 2483894,
+  "symbols_bytes": 2498742,
+  "removed_debug_sections": [
+    ".debug_aranges",
+    ".debug_info",
+    ".debug_abbrev",
+    ".debug_line",
+    ".debug_frame",
+    ".debug_str",
+    ".debug_line_str",
+    ".debug_loclists",
+    ".debug_rnglists"
+  ],
+  "original_coff_symbols": 62182,
+  "remaining_coff_symbols": 0,
+  "preserved_sections": {
+    ".text": {
+      "virtual_size": 10977456,
+      "rva": 4096,
+      "raw_bytes": 10977792,
+      "characteristics": 1610612768,
+      "sha256": "eb3658906963a54a5267bb936fcfb271dd615c41faa9d3e57626fb553ad0a342",
+      "payload_sha256": "7e20403483c521ce883f50c004a90426d856748d32e49414e2e97b9e66ce32ba",
+      "padding_is_zero": true
+    },
+    ".data": {
+      "virtual_size": 47232,
+      "rva": 10985472,
+      "raw_bytes": 47616,
+      "characteristics": 3221225536,
+      "sha256": "39297ebad19a72922a822bc39cf8edc33099e9554582fc681d0ad89aa5049f86",
+      "payload_sha256": "5dd6dacc0d2cd4c7088f84092a224c14657cb793c638dfdcf8b5df33906b759d",
+      "padding_is_zero": true
+    },
+    ".rdata": {
+      "virtual_size": 13941880,
+      "rva": 11034624,
+      "raw_bytes": 13942272,
+      "characteristics": 1073741888,
+      "sha256": "228205349bf2382aac1a18b59c3abde40d4875f9e1d833dc25dbc05c143147fa",
+      "payload_sha256": "ff944b98f78c96c074ee663a6b41471c0f7afb44ff4205cba837be0a6c37f5a9",
+      "padding_is_zero": true
+    },
+    ".pdata": {
+      "virtual_size": 128904,
+      "rva": 24977408,
+      "raw_bytes": 129024,
+      "characteristics": 1073741888,
+      "sha256": "b62cb8f49d6161350b6bb213f8691d9ee8fecfdd56bbf28c13fa61c69cbda2ac",
+      "payload_sha256": "12843619adff8222973ff65b293b192c6360fae756c8eea71175b80a5268386b",
+      "padding_is_zero": true
+    },
+    ".xdata": {
+      "virtual_size": 119948,
+      "rva": 25108480,
+      "raw_bytes": 120320,
+      "characteristics": 1073741888,
+      "sha256": "544722aeefa06e28073cefa5ed054899e4741d6ce6ac2f69c57ecdcaafbd15a1",
+      "payload_sha256": "38adb2e4667398e9ef2d9b2fe64aafc5ea2be01cb943401471153c1d6809834e",
+      "padding_is_zero": true
+    },
+    ".bss": {
+      "virtual_size": 156384,
+      "rva": 25231360,
+      "raw_bytes": 0,
+      "characteristics": 3221225600,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "padding_is_zero": true
+    },
+    ".idata": {
+      "virtual_size": 18644,
+      "rva": 25391104,
+      "raw_bytes": 18944,
+      "characteristics": 1073741888,
+      "sha256": "945f8050952df1759762e8baf7765001416fe485502e358022387e6c7d464795",
+      "payload_sha256": "ae1a53cc366eb8b6cdd5eed8716b720062051accd7168d32436a7cc4067653b6",
+      "padding_is_zero": true
+    },
+    ".tls": {
+      "virtual_size": 16,
+      "rva": 25411584,
+      "raw_bytes": 512,
+      "characteristics": 3221225536,
+      "sha256": "076a27c79e5ace2a3d47f9dd2e83e4ff6ea8872b3c2218f66c92b89b55f36560",
+      "payload_sha256": "374708fff7719dd5979ec875d56cd2286f6d3cf7ec317a3b25632aab28ec37bb",
+      "padding_is_zero": true
+    },
+    ".rsrc": {
+      "virtual_size": 2152,
+      "rva": 25415680,
+      "raw_bytes": 2152,
+      "characteristics": 1073741888,
+      "sha256": "6ca165908cebcabf75d6be77609cbdde4d7587360384b666b01ac641d90d2b76",
+      "payload_sha256": "6ca165908cebcabf75d6be77609cbdde4d7587360384b666b01ac641d90d2b76",
+      "padding_is_zero": true
+    },
+    ".reloc": {
+      "virtual_size": 13544,
+      "rva": 25419776,
+      "raw_bytes": 13824,
+      "characteristics": 1107296320,
+      "sha256": "3d7c1032859244be0bcc5d0b486f137e95f2f07c7adcde452c24e9aa887511d2",
+      "payload_sha256": "4d1d0cec1656479cf95aae3fee54c38573135de06b41e9a4e6712c549fa47509",
+      "padding_is_zero": true
+    }
+  },
+  "zero_disk_padding_changes": [
+    {
+      "section": ".rsrc",
+      "before": 2152,
+      "after": 2560,
+      "zero_padding_only": true
+    }
+  ],
+  "loader": {
+    "machine": 34404,
+    "entry": 5184,
+    "image_base": 5368709120,
+    "alignments": "0010000000020000",
+    "versions": "040000000000000005000200",
+    "subsystem_and_dll_characteristics": "02006001",
+    "stack_heap_and_loader_flags": "000020000000000000100000000000000000100000000000001000000000000000000000"
+  },
+  "preserved_data_directories": [
+    [
+      0,
+      0
+    ],
+    [
+      25391104,
+      18644
+    ],
+    [
+      25415680,
+      2152
+    ],
+    [
+      24977408,
+      128904
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      25419776,
+      13544
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      24832160,
+      40
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      25395376,
+      3952
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "runtime_code_changed": false,
+  "compilation_performed": false,
+  "contexts_removed": 0,
+  "runtime_logging_changed": false,
+  "qualification": "Structural PE equivalence, not a new gameplay or full 18C certificate"
+}

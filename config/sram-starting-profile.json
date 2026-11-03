@@ -1,0 +1,26 @@
+{
+  "schema": "new-horizons-sram-starting-profile-v1",
+  "profile": "DETERMINISTIC_FRESH_CARTRIDGE_FF",
+  "sram_bytes": 32768,
+  "byte_value": 255,
+  "all_initial_sram_bytes_known": true,
+  "initial_dirty": false,
+  "initial_generation": 0,
+  "hardware_universal_power_on_claim": false,
+  "oracle_state_used": false,
+  "owner": "08C_CARTRIDGE_MEMORY_POWER_ON",
+  "valid_persisted_image_overrides_before_guest_access": true,
+  "warm_reset_reapplies_profile": false,
+  "wram_initial_knownness_changed": false,
+  "source_checksum_comparison": {
+    "scope": "BINARY_ARITHMETIC_SOURCE_CHAIN_NOT_COMPLETE_GAMEPLAY",
+    "payload_bytes": 32495,
+    "uniform_ff_checksum": 28689,
+    "uniform_ff_stored_checksum": 65535,
+    "checksum_compare_matches": false
+  },
+  "method_references": [
+    "SimCity deterministic FF fresh SRAM and persisted-image override",
+    "Civilization deterministic starting SRAM and warm-reset preservation"
+  ]
+}

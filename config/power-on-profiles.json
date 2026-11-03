@@ -1,0 +1,57 @@
+{
+  "schema": "new-horizons-power-on-profiles-v1",
+  "production_default": "STRICT_UNKNOWN",
+  "profiles": {
+    "STRICT_UNKNOWN": {
+      "id": 0,
+      "wram_representative": "00",
+      "wram_known": false,
+      "purpose": "hardware-truth and unresolved-control-boundary auditing"
+    },
+    "DETERMINISTIC_ZERO_WRAM_V1": {
+      "id": 1,
+      "wram_representative": "00",
+      "wram_known": true,
+      "purpose": "reproducible natural headless validation and frontend execution"
+    },
+    "DETERMINISTIC_ZERO_MACHINE_V2": {
+      "id": 2,
+      "wram_representative": "00",
+      "wram_known": true,
+      "vram_representative": "00",
+      "vram_known": true,
+      "cgram_representative": "00",
+      "cgram_known": true,
+      "oam_representative": "00",
+      "oam_known": true,
+      "purpose": "reproducible natural headless validation and frontend execution when the ROM consumes unspecified PPU storage"
+    },
+    "DETERMINISTIC_ZERO_MACHINE_ARAM_V3": {
+      "id": 3,
+      "wram_representative": "00",
+      "wram_known": true,
+      "vram_representative": "00",
+      "vram_known": true,
+      "cgram_representative": "00",
+      "cgram_known": true,
+      "oam_representative": "00",
+      "oam_known": true,
+      "aram_representative": "00",
+      "aram_known": true,
+      "purpose": "reproducible natural headless validation and frontend execution when the uploaded driver consumes unwritten power-on ARAM"
+    }
+  },
+  "selection": {
+    "public_legacy_create": "STRICT_UNKNOWN",
+    "headless_validator": "DETERMINISTIC_ZERO_MACHINE_ARAM_V3",
+    "frontend": "DETERMINISTIC_ZERO_MACHINE_ARAM_V3"
+  },
+  "claims": {
+    "physical_snes_wram_powers_on_zero": false,
+    "rom_initializes_every_read_before_use": false,
+    "profile_is_oracle_derived": false,
+    "physical_ppu_storage_powers_on_zero": false,
+    "physical_aram_powers_on_zero": false,
+    "warm_reset_preserves_wram_and_knownness": true
+  }
+}

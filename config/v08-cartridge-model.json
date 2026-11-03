@@ -1,0 +1,18 @@
+{
+  "schema": "new-horizons-v08-logical-cartridge-model-v1",
+  "status": "SOURCE_RESEARCHED_MODEL_IMPLEMENTATION_NOT_YET_QUALIFIED",
+  "logical_mapper": "HIROM_SINGLE_ROM_MAD1_CLASS",
+  "rom_bytes": 2097152,
+  "rom_connected_address_bits": 21,
+  "sram_bytes": 32768,
+  "sram_battery_backed": true,
+  "sram_windows": "20-3F,A0-BF:6000-7FFF",
+  "sram_offset_address_lines": "A0-A12,A16-A17",
+  "published_usa_board_examples": "SNS-QL-0 / SHVC-1J5M-11 / MAD-1",
+  "owner_physical_pcb_identified": false,
+  "enhancement_chip": "NONE_HEADER_AND_PUBLISHED_BOARD_EXAMPLES",
+  "canonical_profile": "config/target-profile.json",
+  "authority_notes": "docs/V08C-MAP-AUTHORITY.md",
+  "no_foreign_game_code": true,
+  "oracle_promotions": 0
+}

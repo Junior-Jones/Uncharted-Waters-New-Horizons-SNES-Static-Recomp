@@ -1,0 +1,135 @@
+{
+  "schema": 1,
+  "target": "Uncharted Waters: New Horizons",
+  "reference": "Starter-SNES-v12 Jungle Strike 1.0.0 frontend",
+  "status": "source-complete-not-runtime-tested",
+  "file_count": 25,
+  "total_size": 338242,
+  "files": [
+    {
+      "path": "core-api/new_horizons_static_recomp.h",
+      "size": 4719,
+      "sha256": "0ded09dcc270cf412c38995f5db9912dc4ad819802d9090708f01242a72233d5"
+    },
+    {
+      "path": "frontend/common/new_horizons_input_contract_test.c",
+      "size": 2319,
+      "sha256": "05a47008a74d8d1c27daa908933642701ac8d52c1c29aad3af77a87238ca83b2"
+    },
+    {
+      "path": "frontend/common/new_horizons_input_latch.c",
+      "size": 1413,
+      "sha256": "9a4b6dcacea8ef3ca69e9db8aac4dc45db7f04a85130891fc8d2d730d2883a55"
+    },
+    {
+      "path": "frontend/common/new_horizons_input_latch.h",
+      "size": 690,
+      "sha256": "1de7e249be335d6fba1533043fa2adf271c7748c17a6eee18602100195e9bf6b"
+    },
+    {
+      "path": "frontend/windows/CMakeLists.txt",
+      "size": 7380,
+      "sha256": "161475a2205317ef2ec1e596e102bc21812576fc524f8a82a673a5e15ec809de"
+    },
+    {
+      "path": "frontend/windows/launcher_version.rc",
+      "size": 856,
+      "sha256": "813541b2f02e747e1de3d72506e4b3d9b193542e77cb6a17e6d1f66a3a8c13d5"
+    },
+    {
+      "path": "frontend/windows/new_horizons_app_core.c",
+      "size": 25510,
+      "sha256": "b7bd5f1aac39b8e69dd4dd1d57c4795e2ae2d523163c0500c977c08a9e54e477"
+    },
+    {
+      "path": "frontend/windows/new_horizons_app_core.h",
+      "size": 527,
+      "sha256": "c840089479bd65e129a15ab99ec85edf82177da8890cb7cd3ff24347f285bd8a"
+    },
+    {
+      "path": "frontend/windows/new_horizons_audio_output_dsound_win32.c",
+      "size": 38485,
+      "sha256": "f53ac1d46be85efd5b5c3b582bbd69d8ba723062dfe1995738a543cf6df7e477"
+    },
+    {
+      "path": "frontend/windows/new_horizons_audio_output_dsound_win32.h",
+      "size": 5459,
+      "sha256": "50da979df8c3d3e1a31ba989b4d3a4ba3bdba3ae314fda33a5e0a1162672e197"
+    },
+    {
+      "path": "frontend/windows/new_horizons_audio_resampler_test.c",
+      "size": 2910,
+      "sha256": "34c50779c0b85f0ab9cb985651d013bb9b22f2db446308fe86ca78e9a35878fd"
+    },
+    {
+      "path": "frontend/windows/new_horizons_audio_resampler.c",
+      "size": 7245,
+      "sha256": "afa112409ccebcf33a3d61e73c3c71598ee9e0409924fae4822b761a0290e77a"
+    },
+    {
+      "path": "frontend/windows/new_horizons_audio_resampler.h",
+      "size": 1692,
+      "sha256": "17cc1bca7a0c952961c2854125715c3522415e2d8033b4d7ebf766b012358ecd"
+    },
+    {
+      "path": "frontend/windows/new_horizons_audio_settings_contract_test.c",
+      "size": 4610,
+      "sha256": "6f8dd2a195851b441c0232ffc9341001c5140dc5bc449f32ac840c1ef5597cca"
+    },
+    {
+      "path": "frontend/windows/new_horizons_frontend_core_test.c",
+      "size": 13145,
+      "sha256": "2e18bf90d3a62c2d2d40482649e86288eee9f294f418e3a3e141abe003dec4e1"
+    },
+    {
+      "path": "frontend/windows/new_horizons_frontend_settings_win32.c",
+      "size": 34604,
+      "sha256": "8ca72de035967d81179faedfa3bcc86e875172b9a520b0149e178f0a579896b4"
+    },
+    {
+      "path": "frontend/windows/new_horizons_frontend_settings_win32.h",
+      "size": 2465,
+      "sha256": "e6f923738d5c13000b88f2beb2d18de52f52ca9ef153c85ff6c146b1ce9a2275"
+    },
+    {
+      "path": "frontend/windows/new_horizons_launcher_win32.c",
+      "size": 157794,
+      "sha256": "33566f68c4829ddc332e1d5ccffd736e9ce1ded257596f982e32d58b5677ac09"
+    },
+    {
+      "path": "frontend/windows/new_horizons_settings_input_contract_test.c",
+      "size": 4885,
+      "sha256": "bb550bd2e2d5ef925511630f690cb913250ef59b943a3894d88b99efd50d71a7"
+    },
+    {
+      "path": "frontend/windows/new_horizons_static_recomp.h",
+      "size": 4719,
+      "sha256": "0ded09dcc270cf412c38995f5db9912dc4ad819802d9090708f01242a72233d5"
+    },
+    {
+      "path": "licenses/SDL-LICENSE.txt",
+      "size": 883,
+      "sha256": "0a036265127ddd9cabe2a8f02ed87e8754d8ded83cf3722831225aecf0388df9"
+    },
+    {
+      "path": "README.md",
+      "size": 1790,
+      "sha256": "f05f77d427de9b2699975522ba4133a3fb7b91473d553aff7f4c479e470109e6"
+    },
+    {
+      "path": "SOURCE-RECEIPT.txt",
+      "size": 795,
+      "sha256": "b257d775c632d6bce88736986b0f7788e35c1467fde154deb0e8d017df4d9976"
+    },
+    {
+      "path": "third_party/new_horizons-gamepad/new_horizons_gamepad_input_win32.c",
+      "size": 11023,
+      "sha256": "1b962fd2508b8a00c071327eef7720fb484b7e95fcc177a81f64de2dc254b0d1"
+    },
+    {
+      "path": "third_party/new_horizons-gamepad/new_horizons_gamepad_input_win32.h",
+      "size": 2324,
+      "sha256": "76d6968d3dc47c39f94a099ff1cf73ecff74f3f5397fbd25409678150248ae6e"
+    }
+  ]
+}

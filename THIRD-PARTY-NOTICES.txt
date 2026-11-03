@@ -1,0 +1,21 @@
+Uncharted Waters: New Horizons (SNES) Static Recompilation 1.0.0
+
+SDL 3.4.10
+-----------
+SDL3 is statically linked for gamepad input under its zlib license.
+See SDL-LICENSE.txt for the complete copyright and license notice.
+
+Frontend reference
+------------------
+The Win32 frontend was ported from Junior Jones's Jungle Strike 1.0.0
+frontend supplied with Starter SNES v12. Its core connector and target labels
+are specific to Uncharted Waters: New Horizons. Jungle Strike game/core code
+is not linked. Source provenance is retained in frontend/SOURCE-RECEIPT.txt.
+
+Development references and original game
+---------------------------------------
+SNES hardware documentation, Starter SNES and other static recompilation
+projects were development references. Mesen is observation-only and is not
+distributed, linked or used as a runtime fallback. The original game ROM,
+music, graphics and other copyrighted game assets are not distributed.
+Windows system components are supplied by the user's Windows installation.

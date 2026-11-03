@@ -1,0 +1,93 @@
+{
+  "status": "PASS_ALL_CORE_COMPILER_READS_PRELOCKED",
+  "core_read_files": 150,
+  "core_read_files_outside_prebuild_lock": 0,
+  "all_compiler_read_files": 1171,
+  "host_only_postbuild_observed_inputs": [
+    {
+      "path": "C:\\msys64\\mingw64\\include\\c++\\16.1.0\\bit",
+      "sha256": "d541426af0b9115a1914018b6ff3761962fa442bb0c0fa559262cc7460906527"
+    },
+    {
+      "path": "C:\\msys64\\mingw64\\include\\c++\\16.1.0\\cmath",
+      "sha256": "7cbdbd83eb3653ed6fdec5a6e652dbedbca2b69c6e1d8b321a6a6ffaaa3b1bb0"
+    },
+    {
+      "path": "C:\\msys64\\mingw64\\include\\c++\\16.1.0\\concepts",
+      "sha256": "de8c244f3097aab0c587a756e8a4f2de751a14c803813e05e0798b9ddd43ab17"
+    },
+    {
+      "path": "C:\\msys64\\mingw64\\include\\c++\\16.1.0\\cstdlib",
+      "sha256": "b92855e06bca0f48ab541bfda9761f7009858c4737c8cbb820ac44a5801929e4"
+    },
+    {
+      "path": "C:\\msys64\\mingw64\\include\\c++\\16.1.0\\limits",
+      "sha256": "37569a76bb92b1b1bafb9603b093db9fb1e7422aec0c601b578986678e5f920f"
+    },
+    {
+      "path": "C:\\msys64\\mingw64\\include\\c++\\16.1.0\\tr1\\bessel_function.tcc",
+      "sha256": "61eda191bd3a1ccf9abb76cc78d2df461226fbc1cac3862a7bb6483fd1bd0c1e"
+    },
+    {
+      "path": "C:\\msys64\\mingw64\\include\\c++\\16.1.0\\tr1\\beta_function.tcc",
+      "sha256": "398efbadeb3ceaa0912c20c6e673fbfb769e68557003acb519370d03997085c2"
+    },
+    {
+      "path": "C:\\msys64\\mingw64\\include\\c++\\16.1.0\\tr1\\ell_integral.tcc",
+      "sha256": "a80dfba0b224233db7d2ce68b755e1d67041d17aff2553ae09459f5744ada794"
+    },
+    {
+      "path": "C:\\msys64\\mingw64\\include\\c++\\16.1.0\\tr1\\exp_integral.tcc",
+      "sha256": "b19bf19af1879c0ac973bfe5c400010ca9c487581042fec19f1f5adf46cf0c56"
+    },
+    {
+      "path": "C:\\msys64\\mingw64\\include\\c++\\16.1.0\\tr1\\gamma.tcc",
+      "sha256": "21e7bccd14d7125b716d6b1034ae25ac080e63decf7e9318119d41f50047fe6f"
+    },
+    {
+      "path": "C:\\msys64\\mingw64\\include\\c++\\16.1.0\\tr1\\hypergeometric.tcc",
+      "sha256": "90d6b60e1b7c8a4afaf39edaffcf7b4082571c65f180bf2ab1f8c86ce4f5df64"
+    },
+    {
+      "path": "C:\\msys64\\mingw64\\include\\c++\\16.1.0\\tr1\\legendre_function.tcc",
+      "sha256": "8c135a1f8819b0348ebd426a67295303608d176b118adac28d100fa17cf01b46"
+    },
+    {
+      "path": "C:\\msys64\\mingw64\\include\\c++\\16.1.0\\tr1\\modified_bessel_func.tcc",
+      "sha256": "042e32ac5f1f9c6fdd436744018e3cac58c6e0704e6be578269ece394434b32b"
+    },
+    {
+      "path": "C:\\msys64\\mingw64\\include\\c++\\16.1.0\\tr1\\poly_hermite.tcc",
+      "sha256": "6b281768a56fa942afc2e8ed88d3fc64d32927cca9c40aaee0625a0262d04cfc"
+    },
+    {
+      "path": "C:\\msys64\\mingw64\\include\\c++\\16.1.0\\tr1\\poly_laguerre.tcc",
+      "sha256": "15b450b11618765d7e593c0fffb2dd5bd5be0d32695c5073ac3029ab0f595913"
+    },
+    {
+      "path": "C:\\msys64\\mingw64\\include\\c++\\16.1.0\\tr1\\riemann_zeta.tcc",
+      "sha256": "65d09ef4b3471ff3ed8e0738e290b86ed0d0343ca0d29b977c7bf065fc388e16"
+    },
+    {
+      "path": "C:\\msys64\\mingw64\\include\\c++\\16.1.0\\type_traits",
+      "sha256": "d72daf4b2bac75ee9db584920d6d8f8adbe352327ecedadd00b3abd3192075f8"
+    },
+    {
+      "path": "C:\\msys64\\mingw64\\include\\swprintf.inl",
+      "sha256": "6eb1fbb448b4f417ee2f87f562f513cb065a701ffe46890351f51ac421ef382d"
+    },
+    {
+      "path": "third_party/SDL3/src/hidapi/windows/hid.c",
+      "sha256": "82c701e55f6a8adba5a748896a746f5329982e6e3fbd184da6e0a1ba8ed94d89"
+    },
+    {
+      "path": "third_party/SDL3/src/hidapi/windows/hidapi_descriptor_reconstruct.c",
+      "sha256": "8ec27d08114656719cb44c0af6f627bb359eab077c6256893ed249d6741602c4"
+    },
+    {
+      "path": "./build/v18c-shared-gcc/sdl/CMakeFiles/SDL3-static.dir/cmake_pch.hxx",
+      "sha256": "480bb2ce0f9ba0528bc20702bca743ff1f59a5e4f0a062ccfe359fcc8b58cab3"
+    }
+  ],
+  "limitation": "21 host SDL/C++/generated PCH dependencies were not prelocked. These hashes are post-build inventory only, not retroactive pre-build evidence or full cold Pass B."
+}

@@ -1,0 +1,146 @@
+{
+  "schema": "new-horizons-v09-workflow-v2",
+  "status": "VERSION09_SOURCE_STATIC_LIBRARY_HANDOFF_COMPLETE_NOT_WHOLE_CORE",
+  "restart_checkpoint": "HANDOFF.md",
+  "resume_requires_explicit_user_instruction": false,
+  "last_explicit_restart": "2026-10-15",
+  "current_report": "docs/V09C-MILESTONE.md",
+  "closing_reconciliation": "docs/V09C-closing-reconciliation.json",
+  "current_execution_checklist": "docs/V09C-CHECKLIST.md",
+  "next_concrete_action": "READ_STARTER10_RELATED_FILES_AND_LOCAL_THEME_PARK_MATURE_TRANSFER_METHODS_THEN_IMPLEMENT10",
+  "method": "STARTER_SNES_V10_AND_INSPECTED_LOCAL_MATURE_RECOMP_METHODS_ONLY",
+  "execution_rules": {
+    "instructions": "REREAD_CURRENT_STARTER_CHAPTER_RELATED_FILES_AND_LOCAL_REFERENCE_MILESTONE_BEFORE_WORK_AND_AT_COMPLETION",
+    "reference_access": "LOCAL_STARTER_AND_LOCAL_MATURE_RECOMPS_ONLY_USER_FORBIDS_ONLINE_HELP",
+    "no_invented_additions": "ONLY_STARTER_OR_LOCAL_RECOMP_METHODS_NO_UNSUPPORTED_EXTRA_STARTUP_PATHS_OR_TEST_FRAMEWORKS",
+    "work_unit": "COMPLETE_IMPLEMENTATION_SECTION_NOT_INDIVIDUAL_PROBE_OR_ARBITRARY_CONTEXT_COUNT",
+    "reuse": "REUSE_UNCHANGED_SOURCE_AND_RECEIPTS_BY_GOVERNING_CONTENT_IDENTITY",
+    "new_probe_rule": "ONLY_FOR_A_CONCRETE_REQUIRED_UNCOVERED_INVARIANT_OR_OBSERVED_DEFECT_NOT_ROUTINE_REASSURANCE",
+    "compilation": "ONLY_CHANGED_NATIVE_CONE_AT_REQUIRED_SECTION_CHECKPOINT_NO_EXE_PROBES",
+    "replacement": "ARCHIVE_CONFIRMED_INCORRECT_OR_SUPERSEDED_IMPLEMENTATION_BEFORE_CORRECT_REPLACEMENT_PRESERVE_VALID_DEPENDENCIES",
+    "scope": "DO_NOT_HIDE_OR_MOVE_UNFINISHED09_RESPONSIBILITIES_LATER_AND_DO_NOT_IMPLEMENT_LATER_OWNER_DEVICES_OUT_OF_SEQUENCE",
+    "existing_obligations": "ALL_REMAINING09_AND_OPEN08_ENTRIES_RETAINED_NO_COMPLETION_CLAIM_FROM_WORKFLOW_REFINEMENT"
+  },
+  "post09_cleanup_user_requirement": {
+    "gate": "VERSION09_SOURCE_STATIC_LIBRARY_HANDOFF_CONFIRMED",
+    "versions": [
+      "06",
+      "08",
+      "09"
+    ],
+    "action": "MOVE_FAULTY_SUPERSEDED_OFF_TRACK_UNNEEDED_WORK_TO_OUTSIDE_TEMP_ARCHIVE",
+    "preserve": "CURRENT_SOURCE_REQUIRED_DEPENDENCIES_VALID_EVIDENCE_AND_REUSABLE_METHODS",
+    "reference_rule": "ARCHIVED_MISTAKES_MUST_NOT_BE_CURRENT_REFERENCE_AUTHORITY",
+    "completed": true,
+    "report": "docs/V06-V08-V09-POST09-CLEANUP.md",
+    "scope": "CONFIRMED_OFF_TRACK_RESEARCH_FAILED_PENDING_PRODUCTS_AND_STALE_CURRENT_HANDOFFS_ACTIVE_CODE_AND_VALID_DEPENDENCIES_PRESERVED"
+  },
+  "contexts": {
+    "exact_keys": 281686,
+    "families": 961,
+    "signatures": 12076,
+    "repeated_instances": 269610,
+    "timing_shapes": 433,
+    "recipes": 67,
+    "descriptors": 75,
+    "events": 367,
+    "new_contexts": 0,
+    "all_path_native_execution_claimed": false
+  },
+  "current_root_build_selection": "docs/V09C-current-source-selection.json",
+  "current_root_static_target": "uncharted_waters_static_core",
+  "current_root_source_count": 2553,
+  "production_selection_still_07": false,
+  "portable_root_cold_build_performed": false,
+  "native_source_candidate_compile": "docs/V09C-reference-reset-refreshed-static-compile.json",
+  "native_owner_symbol_verification": "docs/V09C-reference-reset-native-owner-symbol-verification.json",
+  "native_source_candidate_matches_current_source": true,
+  "pending_native_source_recompile": [],
+  "timing_profile": "config/timing-profile.json",
+  "timing_profile_source_connected": true,
+  "native_master_timeline_source_implemented": true,
+  "master_timeline_selected": true,
+  "master_timeline_naturally_executed": false,
+  "reset": {
+    "entry": "nh_machine09_reset_release_cpu",
+    "method": "UNTIMED_MAPPED_VECTOR_THEN186_SHARED_MASTER_CLOCKS",
+    "startup_master_clocks": 186,
+    "unsupported_cold_epoch_api_retired": true,
+    "device_coordinator": "nh_machine09_reset_with_devices",
+    "actual_device_receiver_bound": false,
+    "physical_assertion_hold_width_qualified": false,
+    "console_audio_reset_semantics_qualified": false,
+    "source_receipt": "docs/V09C-reference-reset-release-source.json"
+  },
+  "interrupts": {
+    "irq_receipt": "docs/V09C-irq-stages-source.json",
+    "nmi_receipt": "docs/V09C-nmi-cpu-boundary-source.json",
+    "comparison_flag_line_separate": true,
+    "nmi_status_edge_recognition_separate": true,
+    "old_timeup_age_domain_retired": true,
+    "normal_nmi_flag_hclock": 2,
+    "normal_nmi_edge_hclock": 6,
+    "external_irq_not_timeup": true,
+    "physical_revision_certification": false
+  },
+  "autojoy": {
+    "source": "static-core/src/new_horizons_autojoy.c",
+    "policy": "config/v09-autojoy-window-policy.json",
+    "receipt": "docs/V09C-autojoy-phases-source.json",
+    "receiver_protocol": "PHASE0_TO34_EVERY128_CLOCKS_PLUS_ABORT",
+    "actual_pin_result_receiver_implemented": false
+  },
+  "transfer": {
+    "alignment_and_request_seams_implemented": true,
+    "shared_timeline_receipt": "docs/V09C-transfer-timeline-source-qualification.json",
+    "boundary_receipt": "docs/V09C-transfer-timing-source-qualification.json",
+    "general_controller_implemented": false
+  },
+  "source_reuse": "docs/V09C-closing-reconciliation.json",
+  "lexical_callback_kind_reconciliation_complete": true,
+  "full_native_path_address_phase_qualification": false,
+  "read_only_timeline_diagnostic_implemented": true,
+  "host_logging_or_snapshot_codec_implemented": false,
+  "remaining09_source_implementation": [],
+  "open_08_owners": [],
+  "version08_completion_claimed": true,
+  "version08_closure": "docs/V08C-final-boundary.json",
+  "after_version08_revalidation": "docs/V09C-after-V08-closure-revalidation.json",
+  "mandatory_later_receivers": {
+    "10C": "General DMA/HDMA controller, payload, priority, start delay and device reset",
+    "11C": "PPU storage/register/geometry/raster and device reset",
+    "12C_13C": "Actual SMP/APUIO synchronization, upload/ARAM/static code and reset semantics",
+    "15C": "Manual serial input, autojoy pin/partial results, reset receiver",
+    "16C": "DSP synthesis/reset semantics",
+    "17C_18C": "Whole-core reconciliation, natural validation and fixed-point closure"
+  },
+  "dormant_target_obligations": [
+    {
+      "id": "NH09-HALT-MATH-PHASE",
+      "status": "UNREACHED_IN_CURRENT_ADMITTED_GUEST_UNIVERSE_GENERIC_API_PHYSICAL_SEMANTICS_STILL_UNQUALIFIED",
+      "authority": "docs/V09C-ordered-event-plans.json",
+      "source_census": "No production C assignment sets waiting or stopped to1; cold constructor/reset assertion clears both",
+      "reuse_condition": "Unchanged admitted-context/native-source/executable-epoch authority; no external state injection",
+      "reopen_when": "A proved WAI/STP context or supported externally restored halted state becomes target-required"
+    }
+  ],
+  "retained_longitudinal_obligations": [
+    "Complete target source-hardware effective-address, writer, bank, stack and lifetime reconciliation; direct MMIO census is not complete indirect/indexed coverage.",
+    "10/11 bind actual startup DMA/PPU and reset/beam receivers before the conditional startup phase bound becomes whole-machine evidence.",
+    "12/16 distinguish audio semantic reset/preservation from independent oscillator remainder preservation.",
+    "15 implement autojoy serial/partial-result and same-clock receiver semantics; phase callbacks alone do not implement input.",
+    "17/18 integrate actual devices, revisit all earlier obligations, perform cold fixed-point and natural verification.",
+    "Future snapshot schema must validate raster enum/event masks, IRQ counters/phase/line, NMI captured edge and autojoy step/next/effects state.",
+    "Version08 report on additions to07 discovery/hardware harvest is docs/V08C-V07-IMPROVEMENTS-REPORT.md."
+  ],
+  "user_later_acceptance": {
+    "in_game_save_load": "VERSION19_CONNECTED_APPLICATION",
+    "save_and_snapshot_directory": "Saves",
+    "gameplay": "SIX_CHARACTERS_REACH_DPAD_MOVEMENT",
+    "testing": "HEADLESS_CORE_CONNECTED_TO_COMPLETE_PORTED_FRONTEND_NATURAL_NTSC_MASTER_TIME_SCREENSHOT_AND_SNAPSHOT_BEFORE_INPUT",
+    "final_package": "ONE_EXE_AFTER_COMPLETE_CORE_AND_TESTING"
+  },
+  "whole_core_completion_claimed": false,
+  "natural_gameplay_tests_started": false,
+  "historical_workflow_archive": "../../archive/v09-closing-source-evidence-predecessors-20261015/before-closure-v09-workflow.json"
+}

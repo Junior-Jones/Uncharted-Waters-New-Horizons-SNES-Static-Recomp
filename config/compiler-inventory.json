@@ -1,0 +1,39 @@
+{
+  "schema": "new-horizons-compiler-inventory-v1",
+  "inspection_scope": "Read-only C-drive compiler scan: Program Files, Program Files (x86), MSYS2, Chocolatey, and per-user Programs roots; no compiler was executed",
+  "scanned_on": "2026-10-11",
+  "selected_future_primary": {
+    "family": "MSVC",
+    "toolset": "14.40.33807",
+    "compiler_file_version": "19.40.33811.0",
+    "compiler_path": "C:/Program Files/Microsoft Visual Studio/2022/Enterprise/VC/Tools/MSVC/14.40.33807/bin/Hostx64/x64/cl.exe",
+    "compiler_sha256": "1706e469753a77bfa364472af9fadc8b8f182c6760e416ec1932a127fd129678",
+    "librarian_file_version": "14.40.33811.0",
+    "librarian_path": "C:/Program Files/Microsoft Visual Studio/2022/Enterprise/VC/Tools/MSVC/14.40.33807/bin/Hostx64/x64/lib.exe",
+    "librarian_sha256": "e6bd02eab6ea941eff9b5a846fa722005eab29eb14be271ce3a2af16a075f574",
+    "reason": "complete native x64 C toolchain with bundled Windows SDK, CMake, Ninja, and librarian"
+  },
+  "selected_future_secondary": {
+    "family": "GCC",
+    "package_version": "16.1.0-5",
+    "path": "C:/msys64/mingw64/bin/gcc.exe",
+    "sha256": "d38d4dd6bea387499487881383e644ab7c193ac8f8364dc4252d6e6cc09700e2",
+    "archiver_package_version": "GNU Binutils 2.46.1-2",
+    "archiver_path": "C:/msys64/mingw64/bin/ar.exe",
+    "archiver_sha256": "0946b050ec9e587d539dd270dba905cb7cd44b55889e13226783960d459055bc"
+  },
+  "llvm": {
+    "status": "not_found_in_scanned_compiler_roots"
+  },
+  "cmake": {
+    "file_version": "3.28.3-msvc11",
+    "path": "C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/cmake.exe",
+    "sha256": "fc43b67ba03e1edb63b2937d6311808a094b31b815435b39547aef01cefe8fb1"
+  },
+  "ninja": {
+    "path": "C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe",
+    "sha256": "c074015e9f7b40c85fb3d7593a77e0eef8485760a6d33b02257b55ec1199810e",
+    "version_metadata": "not embedded; reference inventory identifies 1.11.0; executable not invoked due compiler hold"
+  },
+  "policy": "Do not invoke any native compiler, linker, librarian, CMake, Ninja, or native build driver until the full 07C admitted S-CPU universe is lowered and reconciled. After that gate, all build outputs and invocations must remain inside this project temp tree."
+}

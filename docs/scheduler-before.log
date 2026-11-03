@@ -1,0 +1,14 @@
+requested_frames=1800 dispatch_steps=26139879
+frame=256x224 sequence=1800 nonblack=9591 unique_colors=6 pixel_fnv1a64=58EA63E7CE232EFF
+pcm_frames=958346 nonzero_samples=837650 unknown_frames=0 peak=10318 pcm_fnv1a64=731330791F3F5C17
+instruction_entry=C09F5C instruction_context=0604FAE2 entry_S=08CB
+status=0 owner=8 failure_address=000000 failure_value=00 failure_known=00
+scpu=008490 context=00042482 A=0001 X=0001 Y=0068 D=0000 S=08C7 P=24 PBR=00 DBR=00 E=0 cpu_cycles=96256426 master=643208414 raster=225:82 dot=20 fields=1799
+wram[0052]=0010/3 wram[0068]=0000/3 wram[006A]=0000/3
+stack_window=08B7:2C/1,85/1,00/1,00/1,24/1,10/1,97/1,00/1,00/1,00/1,00/1,68/1,00/1,01/1,00/1,01/1,00/1,20/1,5F/1,9F/1,C0/1,32/1,96/1,7E/1,00/1,00/1,08/1,00/1,00/1,00/1,00/1,01/1
+ssmp_pc=0C92 A=24 X=01 Y=00 SP=F5 PSW=00 ssmp_cycles=30667092 smp_remainder=187432 ssmp_instructions=8042842 apu_phase=5 upload_bytes=7029 expected_token=75 last_ack=78 cpu_ports=93/00 dsp_frames=958346 voices=FF fifo=0 pcm_known=958346 pcm_unknown=0 pcm_overflows=0
+aram[21D1]=E5/1 sdsp_aram_reads=34985842 sdsp_aram_writes=1676328 flg=00 esa=D8 edl=04 echo=ED40+1544/2000 writable=1
+ppu_mode=1 forced_blank=0 brightness=14 main_screen=17/FF published=1800 terminal_raster=2777169 terminal_cpu=0
+power_on_profile=3 hdma_enable=00 dma_active=FF dma_regs=00/00,00/00,00/00,00/00,00/00,00/00,00/00,00/00,00/00,00/00,00/00,00/00
+render_failure_kind=0 address=000000 value=00 known=00
+ppu_storage_reads=4258 ppu_storage_writes=189496 oam_data_writes=6528

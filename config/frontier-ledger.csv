@@ -1,0 +1,12 @@
+Frontier_ID,Owner,Class,Status,Authority_Needed,Failure_Rule
+NH-FR-0001,01C,PHYSICAL_PCB,OPEN_EXPLICIT_UNKNOWN,physical cartridge evidence,Do not infer a board part number from the ROM image
+NH-FR-0002,03C,ROM_BYTE_OWNERSHIP,CLOSED_CANDIDATE_CENSUS,whole-ROM lexical and conservative classification,Lexical candidates remain non-code until exact source proof
+NH-FR-0003,08C,BUS_MAPPING,OPEN,source-proved complete 24-bit map,Unproved aliases reject rather than modulo-wrap
+NH-FR-0004,09C,REGION_TIMING,NATIVE_SOURCE_PROFILE_BUILT_INTEGRATION_PHASE_OPEN,config/timing-profile.json and config/v09-workflow.json,No fixed presentation rate may become guest timing authority
+NH-FR-0005,12C,AUDIO_UPLOAD,CLOSED_SOURCE_PROVED,docs/V12C-aram-epoch-receipt.json,No captured ARAM or oracle state may seed production
+NH-FR-0006,05C,INTERRUPT_REENTRY,RECONCILE_CURRENT05_07_SOURCE_AND09_PHASE,IRQ handler RTI 00:971F source return domains plus09 scheduler entry phase,No RTI resume target is selectable without the finite source relation
+NH-FR-0007,05C,STACK_REPLACEMENT,OPEN_FAIL_CLOSED,source-specific TXS theorem at C0:8024,Stop before replacing the logical procedure stack without proof
+NH-FR-0008,05C,INTERRUPT_REENTRY,RECONCILE_CURRENT05_07_SOURCE_AND09_PHASE,NMI handler RTI C0:855C source return domains plus09 scheduler entry phase,No RTI resume target is selectable without the finite source relation
+NH-FR-0009,05C,DYNAMIC_TARGET,OPEN_FAIL_CLOSED,producer and finite domain for RAM pointer consumed at C0:9484,All RAM-produced indirect targets are rejected until proved
+NH-FR-0010,06C,EXECUTABLE_WRAM,CLOSED_SOURCE_PROVED_EPOCH,producer bytes and epoch for entry 7E:F5A1,Only epoch NH-WRAM-EPOCH-0001 with exact live bytes may dispatch
+NH-FR-0011,05C,STACK_CALLING_CONVENTION,OPEN_FAIL_CLOSED,callee argument-consumption theorem for C1:FF38,Stop when a callee consumes bytes outside its proved local logical frame

@@ -1,0 +1,58 @@
+Uncharted Waters: New Horizons (SNES) Static Recompilation
+Version: 1.0.0
+Platform: Native 64-bit Windows 10 and Windows 11
+Executable: Launcher.exe
+Release date: 3 November 2026
+ROM: USA/Canada NTSC; supplied separately, never included
+
+Version 1.0.0 features
+----------------------
+- Native Win32 frontend, Welcome window, menus and toolbar.
+- Configurable one-player keyboard and statically linked SDL3 gamepad input.
+- Windowed/full-screen display, integer scaling and optional FPS display.
+- Natural NTSC frame lock enabled by default (approximately 60.0988 FPS).
+- Five compatible-build snapshot slots, screenshot capture and settings.ini.
+- In-game battery saves and snapshots kept together in the Saves folder.
+- Static S-CPU/SPC700 core, PPU, DMA/HDMA, NTSC scheduling and S-DSP audio.
+- In-frame PCM delivery, DirectSound output and configurable Audio Settings.
+- Fail-closed execution with detailed diagnostic text logs.
+- Reset cold-restarts the console while retaining in-game battery save data.
+- Native rendering also supports the hardware-reset Mode 0 transition.
+- Snapshot loads are validated on a separate candidate before replacing the
+  running state, including recovery from a stopped run. Initial 1.0.0 saves
+  remain compatible; unrelated development builds are still rejected.
+- Optional experimental 16:9 widescreen, disabled by default.
+- One-time experimental widescreen notice from the menu/toolbar, with a
+  bottom Close button and persistent WidescreenNoticeShown setting.
+
+Widescreen status
+-----------------
+Expanded Port, sailing, combat and several menu/chart layouts are included.
+Coverage is partial; some scenes retain the original display. This release
+does not claim every menu, special effect, introduction or ending is widened.
+Disable Widescreen to restore the original image/layout without resetting.
+
+Release checks
+--------------
+The native frontend menu/toolbar check verifies notice creation, bottom Close,
+acceptance, saved acknowledgement, reloaded suppression and shared ON/OFF
+controls. The packaged executable receives a short cold-boot smoke check.
+Snapshot regression loads the original released save and creates a fresh
+snapshot. Reset must return to frame zero, preserve battery data and match all
+1800 frames of a fresh cold boot. It then reloads and compares 300 frames with
+widescreen both OFF and ON; repeated immediate reset/load is also checked.
+Earlier core/gameplay and audio checks remain scoped development evidence,
+not a complete playthrough or a guarantee of every possible route/device.
+
+Canonical ROM SHA-256:
+64bc4707f422661a66618088887e2363a5f896ea683c58984fffd96dd21ab5f0
+
+Core compatibility identity:
+027cba0db596385278959109404981e52e898ca83bd549b5e782faf23ed7b64e
+Launcher.exe size: 25253888 bytes
+Launcher.exe SHA-256:
+b23d257b5ebad16080b5c5debf49318df8aa47fe82995d7e050faa7f802d8bc4
+
+Feedback: use the Issues tab on this project's GitHub repository.
+Please include the version, reproduction steps, widescreen ON/OFF state and
+relevant screenshots/logs. Never include the game ROM.

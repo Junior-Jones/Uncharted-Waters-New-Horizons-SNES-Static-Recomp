@@ -1,0 +1,111 @@
+2026-10-22: actual core -> adapter -> frontend streaming examination
+=================================================================
+
+LATEST RESULT:128-sample revision compiled but still crackled in the authorized
+user-listening run. Stopped PID15500 after that feedback. No success claim.
+Trace Audio-Transport-20261022-092504-543.txt: at frame5251,117 underruns,
+8 recoveries,200 deadline resets, zero adapter drops/device write failures.
+Core-overflow/knownness counters do not prove correct waveform semantics.
+Native-core and frontend-delivery investigations both remain open.
+
+Whole-backend source comparison, after target-symbol normalization:
+- Gundam Wing GitHub: identical DirectSound backend.
+- Rock/Jungle GitHub: only the32000/32040 accepted device-rate choice differs.
+No additional backend/clock change is justified merely by claiming another
+frontend port is needed. Establish the target-specific failure first.
+This supersedes the pre-test status paragraphs below without rewriting them.
+
+Scope: local Temp work AND GitHub source, not online guesses or just wrapper
+similarity. No playback tests restarted after the user stopped the audio test.
+
+Rock n' Roll Racing
+-------------------
+Examined Temp/04-RockNRR-V10.2-Work and GitHub/
+Rock-N-Roll-Racing-SNES-Static-Recomp-Source.
+runtime/v10_2_apu.cpp synchronizes the compiled APU to guest master time and
+registers sc_static_apu_set_sink. frontend/windows/rnr_app_core.c installs
+audio_sink, which appends stereo samples into the bounded adapter ring and
+counts any dropped old frames. During native instruction execution its
+advance_frames invokes the output callback every16384 instructions. The
+launcher calls pump_progress inside that callback and the full pump at frame
+completion. The backend consumes only queued native PCM, resamples, applies
+volume and submits to DirectSound. Device queue control is host-owned.
+
+Jungle Strike
+-------------
+Examined Temp/compact-source-candidate-1.0.0 plus GitHub/Source code.
+runtime/v10_33_dsp.c publishes native stereo PCM with knownness into its core
+FIFO, fails closed on overflow and exposes a consuming read operation.
+runtime/v10_40_core_api.c invokes its streaming callback when at least128 PCM
+frames are available during the instruction loop. frontend/windows/
+jungle_app_core.c stream_audio_progress drains core PCM into the adapter ring
+BEFORE invoking the frontend output callback. The launcher/backend then pump
+that partial batch; end-of-frame latency control is separate. This behavior is
+present in both examined Temp candidate and GitHub source, not just a comment.
+
+Gundam Wing
+-----------
+Examined Temp/Native-Final-Source-20260906 plus GitHub/
+Gundam-Wing-Endless-Duel-SNES-Static-Recomp-Source.
+static-core/src/sdsp_clock_current.c publishes timestamped stereo/knownness
+frames into a4096-frame ring with a monotonic total-frame index. The Temp and
+GitHub clock-owner files have identical SHA256:
+5bf6f1d3faf53085b7c83f8be42a181a0eaefb5b7a4376ac1c09ddde6c23482d.
+static-core/src/core_api.c exposes indexed PCM reads. frontend/common/
+gundam_w_host_core.c owns a separate read index and advances it only after
+successful reads. frontend/windows/gundam_w_app_core.c drains batches up to
+1024 frames into its bounded adapter FIFO after a natural frame, then invokes
+the frontend pump. It is NOT the same in-frame128-sample interface as Jungle.
+The runtime/README.md is historical; the current audio owner is static-core/.
+
+Final correction and user result, 2026-10-22
+-------------------------------------------
+The 128-frame streaming correction alone still crackled. Further comparison
+with Rock/Gundam scheduler source found a fourteen-event raster scan on EVERY
+master tick in NH. Added a pure candidate-clock guard; the complete original
+ordered event loop remains at possible event positions. No master ticks,
+IRQ/autojoy/SMP/DSP updates or guest rates were removed or changed.
+
+An 1,800-field silent before/after check produced identical complete text
+diagnostics: dispatches26,139,879; PCM958,346 frames/hash731330791F3F5C17;
+pixels58EA63E7CE232EFF; master643208414; zero owner/render/PCM failures.
+Wall time45.4049407 ->36.1954768 seconds in this single paired observation.
+The final live trace recorded zero device underruns/recoveries/write failures
+and zero adapter/device drops in the sampled interval. User confirmed title
+music had no crackling. The listening app PID7232 was stopped at their request.
+No broader gameplay-audio or full cold Pass-B certification is claimed.
+Final stripped Launcher SHA256:
+fc28411baba8cbb24783559a11c94d001e38c5ed996d9d9b660202d19b9eea93.
+
+Historical New Horizons comparison and decision
+-----------------------------------
+Its native DSP and adapter each have an8192-frame consuming FIFO, not Gundam's
+indexed core history and not Rock's direct sink. Its original streamed API
+pumped only after the complete frame. The first16384-step patch borrowed
+Rock's cadence but did not reproduce Jungle's PCM-ready boundary and did not
+fix user-audible playback. Do not label it successful.
+
+Implemented in target-owned source: opaque streamed core call, invoking
+the host-output callback when128 native PCM frames are ready at an instruction
+boundary. Adapter transfers those samples before frontend submission. The
+existing unstreamed call passes no callback and retains its prior loop/limit.
+Callbacks are ephemeral and may drain PCM only, not mutate/advance guest state.
+Remaining partial PCM is transferred at the normal frame boundary.
+
+Strict GCC syntax-only checks pass for both changed C units. The incremental
+production Launcher compile/link also passed (4 steps), without executing it.
+Snapshot build identity was regenerated:
+35f330a12cca8fdac978cd5d5b959188a8218a85a9eadf329481e7e3e3c48923.
+No playback test was restarted. Speaker playback remains UNQUALIFIED; this transport
+correction is not proof of resolving the observed underruns or frame costs.
+
+Observed diagnostic run before it was stopped
+--------------------------------------------
+Audio-Transport-20261022-091656-172.txt recorded zero observed native PCM
+overflow/unknown counts, adapter drops and device write failures. A sampled
+row at frame3618 had60 cumulative device underruns and106 deadline resets,
+queue3634/target4320 at48kHz; other intervals dropped below natural NTSC
+throughput. User confirmed crackling still present. This localizes a host
+delivery problem but does not exclude additional core/audio defects.
+No guest clock/rate change, buffer inflation, underrun-counter suppression or
+unproved pacing-threshold change was applied to conceal it. Packaging held.

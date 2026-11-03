@@ -1,0 +1,23 @@
+{
+  "schema": "new-horizons-v11-workflow-v1",
+  "status": "COMPLETE_SOURCE_AND_SELECTED_STATIC_LIBRARY",
+  "starter_owner": "11C",
+  "previous_milestone": "docs/V10C-MILESTONE.md",
+  "method_reference": "Theme Park V11C plus relevant local SNES PPU-state methods; methods only",
+  "direct_generated_ppu_byte_access_sites": 219,
+  "initial_source_surface": "docs/V11C-initial-ppu-source-surface.json",
+  "fixed_dma_hdma_profiles": 28,
+  "live_mode_schemas": 2,
+  "sole_bus_owner": "NH_OWNER_PPU_11 through NHBusPorts.ppu",
+  "ppu_source": "static-core/src/new_horizons_ppu.c",
+  "ppu_header": "static-core/internal/new_horizons_ppu.h",
+  "direct_source_bank_join": "docs/V11C-direct-source-bank-join.json",
+  "dma_hdma_receiver_join": "docs/V11C-dma-hdma-receiver-join.json",
+  "selected_source_count_after_ppu": 2555,
+  "focused_gcc_syntax_check": "PASS_NO_OBJECT_OR_EXECUTABLE",
+  "renderer_or_pixels_claimed": false,
+  "compile_deferred_until_selected_C_complete": false,
+  "static_compile_receipt": "docs/V11C-static-compile-receipt.json",
+  "archived_faulty_draft": "../../archive/v11-byte-width-draft-20261016",
+  "goal_complete": true
+}

@@ -1,0 +1,8 @@
+{
+  "status": "PASS_LOCKED_BUILD_INPUTS_AND_EXACT_SOURCE_SELECTION",
+  "lock_sha256": "0e8377caa7b01cff308f74e03079c7cdd2cb2abcddf52439494af12b47bba1d9",
+  "files_checked": 6850,
+  "core_units": 103,
+  "unchanged_original_units": 28,
+  "shared_units": 75
+}

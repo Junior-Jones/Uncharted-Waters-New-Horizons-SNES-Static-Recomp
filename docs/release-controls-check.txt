@@ -1,0 +1,16 @@
+PASS headless launcher remains hidden
+PASS default is original layout
+PASS menu updates shared setting and toolbar
+PASS first menu click opens experimental notice with bottom default Close; not accepted before close
+PASS notice Close button fits at bottom
+PASS Close accepts and dismisses notice
+PASS enabled setting and one-time acknowledgement reload from isolated INI
+PASS toolbar disables and synchronizes menu
+PASS subsequent toolbar click does not repeat notice
+PASS original-layout setting reloads from isolated INI
+PASS reloaded acknowledgement suppresses notice on next menu enable
+PASS actual hidden Settings dialog initializes/toggles/applies ON and OFF; checkbox fits; other settings unchanged
+PASS widescreen control fits820px minimum window
+PASS loading disables toolbar and menu presentation controls
+Scope: toolbar/menu/backend persistence and actual hidden Settings dialog; live core geometry checked separately.
+EXIT 0

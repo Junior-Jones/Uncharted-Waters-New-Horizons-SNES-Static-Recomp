@@ -1,0 +1,215 @@
+{
+  "byte_census": {
+    "path": "config/byte-ownership.csv",
+    "states": {
+      "HEADER": 32,
+      "UNRESOLVED": 2097088,
+      "VECTOR": 32
+    },
+    "total_bytes": 2097152
+  },
+  "candidate_observation_is_proof": false,
+  "cartridge": {
+    "full_24bit_bus_semantics_owner": "08C",
+    "header_declared_cartridge_type": "ROM_RAM_BATTERY_TYPE_0x02",
+    "header_declared_enhancement_hardware": "NONE_TYPE_HIGH_NIBBLE_0x0",
+    "header_declared_sram_bytes": 32768,
+    "logical_mapper": "HIROM",
+    "physical_pcb": "UNKNOWN_AT_01C",
+    "region": "USA",
+    "speed": "FASTROM",
+    "video_standard": "NTSC"
+  },
+  "context_key": [
+    "PBR",
+    "PC",
+    "E",
+    "M",
+    "X"
+  ],
+  "header": {
+    "canonical_offset": "0x00FFC0",
+    "checksum": "0x7799",
+    "checksum_complement": "0x8866",
+    "checksum_pair_valid": true,
+    "computed_checksum": "0x7799",
+    "destination_region_code": "0x01",
+    "map_mode": "0x31",
+    "raw_offset": "0x0101C0",
+    "rom_size_code": 11,
+    "rom_type": "0x02",
+    "sram_size_code": 5,
+    "title": "NEW HORIZONS",
+    "version": 0
+  },
+  "mapping_evidence": {
+    "admitted_canonical_windows": "banks C0-DF full; banks 00-1F and 80-9F at 8000-FFFF",
+    "header_candidates": [
+      {
+        "canonical_header_offset": "0x00FFC0",
+        "checksum": "0x7799",
+        "checksum_complement": "0x8866",
+        "emulation_reset": "0x8009",
+        "maker_code": "0xC8",
+        "map_mode": "0x31",
+        "mapping": "HiROM",
+        "mapping_candidate": "HiROM",
+        "present": true,
+        "reasons": [
+          "mostly printable nonempty title",
+          "checksum/complement pair sums to 0xFFFF",
+          "stored checksum equals canonical ROM byte sum",
+          "emulation RESET vector is in upper bank half",
+          "recognized map mode 0x31",
+          "map mode agrees with candidate header site",
+          "plausible ROM size code"
+        ],
+        "region_code": "0x01",
+        "rom_size_code": 11,
+        "rom_type": "0x02",
+        "score": 19,
+        "speed": "FastROM",
+        "sram_size_code": 5,
+        "title": "NEW HORIZONS",
+        "title_bytes_hex": "4e455720484f52495a4f4e53202020202020202020",
+        "version": 0
+      },
+      {
+        "canonical_header_offset": "0x007FC0",
+        "checksum": "0x0000",
+        "checksum_complement": "0x0000",
+        "emulation_reset": "0x0000",
+        "maker_code": "0x00",
+        "map_mode": "0x00",
+        "mapping": "UNKNOWN",
+        "mapping_candidate": "LoROM",
+        "present": true,
+        "reasons": [],
+        "region_code": "0x00",
+        "rom_size_code": 0,
+        "rom_type": "0x00",
+        "score": 0,
+        "speed": "UNKNOWN",
+        "sram_size_code": 0,
+        "title": "",
+        "title_bytes_hex": "000000000000000000000000000000000000000000",
+        "version": 0
+      }
+    ],
+    "invalid_mapping_policy": "REJECT_NOT_MODULO_WRAP",
+    "reset_vector": "0x8009",
+    "reset_vector_hirom_physical_offset": "0x008009",
+    "selected_candidate": "HiROM",
+    "selection_margin": 19,
+    "unproved_mirrors_owner": "08C"
+  },
+  "not_claimed": [
+    "disassembly",
+    "proved code or data outside header/vector",
+    "CPU contexts",
+    "runtime core",
+    "frontend",
+    "gameplay",
+    "release"
+  ],
+  "rom": {
+    "canonical_sha256": "64bc4707f422661a66618088887e2363a5f896ea683c58984fffd96dd21ab5f0",
+    "canonical_size_bytes": 2097152,
+    "copier_header_bytes": 512,
+    "crc32": "3C3C63E6",
+    "input_basename": "Uncharted Waters - New Horizons (U).smc",
+    "original_sha256": "4616dd1b906370c1ec27042aadd02c2f91f0261f065b0d05cb2597733394d8a8",
+    "original_size_bytes": 2097664,
+    "sum16": "0x7799"
+  },
+  "runtime_cpu_decoder_allowed": false,
+  "schema": "new-horizons-v01c-cartridge-profile-v1",
+  "target_name": "Uncharted Waters: New Horizons (USA)",
+  "unknown_context_policy": "FAIL_CLOSED",
+  "vectors": [
+    {
+      "canonical_offset": "0x00FFE4",
+      "cpu_vector_address": "0x00FFE4",
+      "name": "native_cop",
+      "raw_offset": "0x0101E4",
+      "value": "0x0000"
+    },
+    {
+      "canonical_offset": "0x00FFE6",
+      "cpu_vector_address": "0x00FFE6",
+      "name": "native_brk",
+      "raw_offset": "0x0101E6",
+      "value": "0xFF00"
+    },
+    {
+      "canonical_offset": "0x00FFE8",
+      "cpu_vector_address": "0x00FFE8",
+      "name": "native_abort",
+      "raw_offset": "0x0101E8",
+      "value": "0x0000"
+    },
+    {
+      "canonical_offset": "0x00FFEA",
+      "cpu_vector_address": "0x00FFEA",
+      "name": "native_nmi",
+      "raw_offset": "0x0101EA",
+      "value": "0x8490"
+    },
+    {
+      "canonical_offset": "0x00FFEC",
+      "cpu_vector_address": "0x00FFEC",
+      "name": "native_reserved",
+      "raw_offset": "0x0101EC",
+      "value": "0x0000"
+    },
+    {
+      "canonical_offset": "0x00FFEE",
+      "cpu_vector_address": "0x00FFEE",
+      "name": "native_irq",
+      "raw_offset": "0x0101EE",
+      "value": "0x96DF"
+    },
+    {
+      "canonical_offset": "0x00FFF4",
+      "cpu_vector_address": "0x00FFF4",
+      "name": "emulation_cop",
+      "raw_offset": "0x0101F4",
+      "value": "0x0000"
+    },
+    {
+      "canonical_offset": "0x00FFF6",
+      "cpu_vector_address": "0x00FFF6",
+      "name": "emulation_reserved",
+      "raw_offset": "0x0101F6",
+      "value": "0x0000"
+    },
+    {
+      "canonical_offset": "0x00FFF8",
+      "cpu_vector_address": "0x00FFF8",
+      "name": "emulation_abort",
+      "raw_offset": "0x0101F8",
+      "value": "0x0000"
+    },
+    {
+      "canonical_offset": "0x00FFFA",
+      "cpu_vector_address": "0x00FFFA",
+      "name": "emulation_nmi",
+      "raw_offset": "0x0101FA",
+      "value": "0x0000"
+    },
+    {
+      "canonical_offset": "0x00FFFC",
+      "cpu_vector_address": "0x00FFFC",
+      "name": "emulation_reset",
+      "raw_offset": "0x0101FC",
+      "value": "0x8009"
+    },
+    {
+      "canonical_offset": "0x00FFFE",
+      "cpu_vector_address": "0x00FFFE",
+      "name": "emulation_irq_brk",
+      "raw_offset": "0x0101FE",
+      "value": "0x0000"
+    }
+  ]
+}

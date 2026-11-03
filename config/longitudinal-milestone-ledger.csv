@@ -1,0 +1,19 @@
+Owner,Responsibility,Status,Predecessor,Current_Evidence
+01C,cartridge identity target contract total physical-byte census,CLOSED,NONE,config/target-profile.json
+02C,complete W65C816 semantic and offline decode foundation,CLOSED,01C,docs/V02C-SEMANTIC-MANIFEST.json
+03C,whole-ROM lexical universe and conservative classification,CLOSED,02C,docs/V03C-lexical-summary.json
+04C,exact S-CPU contexts roots and intelligence sidecars,CLOSED_DIRECT_FLOW,03C,docs/V04C-context-summary.json
+05C,dynamic flow returns and interrupt re-entry,CLOSED_WITH_NAMED_FAIL_CLOSED_BOUNDARIES,04C,docs/V05C-flow-summary.json
+06C,executable RAM epochs and mutation ownership,CLOSED,05C,docs/V06C-executable-memory-summary.json
+07C,deterministic static S-CPU generation,CLOSED_NATIVE_GENERATION_STATIC_ARCHIVE,06C,docs/V07C-complete-lock.json
+08C,24-bit bus reset memory MMIO persistence,CLOSED_SOURCE_AND_SELECTED_STATIC_CORE,07C,docs/V08C-final-boundary.json
+09C,master scheduler interrupts independent clocks,CLOSED_SOURCE_AND_SELECTED_STATIC_LIBRARY,08C,docs/V09C-after-V08-closure-revalidation.json
+10C,DMA and HDMA,CLOSED_SOURCE_AND_SELECTED_STATIC_LIBRARY,09C,docs/V10C-after-V08-V09-closure-revalidation.json
+11C,PPU state semantics,CLOSED_SOURCE_AND_SELECTED_STATIC_LIBRARY,10C,docs/V11C-MILESTONE.md
+12C,S-SMP bootstrap APUIO timers ARAM epochs,CLOSED_SOURCE_AND_SELECTED_STATIC_LIBRARY,11C,docs/V12C-MILESTONE.md
+13C,static S-SMP AOT,CLOSED_SOURCE_AND_SELECTED_STATIC_LIBRARY,12C,docs/V13C-MILESTONE.md
+14C,raster renderer and completed frames,CLOSED_SOURCE_AND_SELECTED_STATIC_LIBRARY,13C,docs/V14C-MILESTONE.md
+15C,input timing and persistence transitions,CLOSED_SOURCE_AND_SCOPED_NATIVE_OBJECT,14C,docs/V15C-MILESTONE.md
+16C,S-DSP audio and core PCM,CLOSED_SOURCE_AND_TWO_SELECTED_STATIC_LIBRARIES,15C,docs/V16C-MILESTONE.md
+17C,longitudinal reconciliation and Pass A,ACTIVE_STARTER_V12,16C,
+18C,cold Pass B certification and recoverable release,PENDING,17C,

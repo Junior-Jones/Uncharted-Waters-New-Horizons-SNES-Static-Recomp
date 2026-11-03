@@ -1,0 +1,18 @@
+{
+  "schema": "new-horizons-host-release-policy-v1",
+  "status": "USER_REQUIRED_PENDING_17C_18C_IMPLEMENTATION_AND_ACCEPTANCE",
+  "production_application": "Launcher.exe",
+  "application_executable_count": 1,
+  "core_linkage": "STATIC_INTO_APPLICATION_NOT_SEPARATE_CORE_DLL",
+  "host_dependency_linkage": "STATIC_WHERE_SUPPORTED_NO_BUNDLED_SDL_OR_COMPILER_RUNTIME_DLL",
+  "windows_system_dlls_are_platform_dependencies": true,
+  "rom_bundled": false,
+  "user_runtime_files_external": true,
+  "saves_and_snapshots_directory": "Saves",
+  "saves_directory_created_by_application": true,
+  "tools_tests_and_static_archives_in_application_release": false,
+  "source_and_recovery_packages_are_separate": true,
+  "selection_point": "AFTER_COMPLETE_CORE_FRONTEND_TESTING_AND_CURRENT_17C_18C_ACCEPTANCE",
+  "reference_method": "THEME_PARK_PORTABLE_RELEASE_STATIC_SDL_AND_RUNTIME_LINKAGE",
+  "foreign_game_core_code_import_allowed": false
+}

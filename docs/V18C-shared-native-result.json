@@ -1,0 +1,192 @@
+{
+  "schema": "new-horizons-v18c-shared-native-compaction-result-v1",
+  "date": "2026-10-21",
+  "status": "IMPLEMENTED_BUILT_AND_HEADLESS_VERIFIED_PRIVATE_CANDIDATE_NOT_PROMOTED",
+  "scope": "Execute the reference exact-key frozen-parameter native body-sharing method, preserving all current static authority. This is not full Starter 18C release certification.",
+  "method_references": [
+    "Starter SNES v12 docs63/90",
+    "Rock n' Roll Racing v10_2_compact_generated.py",
+    "Gundam Wing compact_generated_scpu_native.py",
+    "Jungle Strike generate_static_core_compact.py",
+    "Theme Park generated-only size-build policy"
+  ],
+  "implementation": {
+    "generator": "tools/v18_share_native.py",
+    "independent_verifier": "tools/v18_verify_shared.py",
+    "build_input_verifier": "tools/v18_shared_build_inputs.py",
+    "cmake_option": "NH_SHARED_SOURCE_ROOT",
+    "default_selection_changed": false,
+    "context_count": 283586,
+    "original_selected_shards": 2545,
+    "shared_native_bodies": 538,
+    "contexts_removed": 0,
+    "original_dispatcher_retained": true,
+    "wrapper_symbols_retained": 2545,
+    "integer_literal_types_preserved": true,
+    "successor_case_labels_preserved": true,
+    "guard_array_lifetime_change": "static const to automatic const only; exact byte/sizeof values retained, synchronous guard consumption and clock-owned copy proved",
+    "runtime_opcode_decoder": false,
+    "runtime_learning": false,
+    "fallback": false,
+    "handwritten_hardware_semantics_changed": false
+  },
+  "sizes": [
+    {
+      "scope": "Selected original shards versus complete shared source/header/allow-list",
+      "before_bytes": 292343715,
+      "after_bytes": 36264245,
+      "reduction_percent": 87.6
+    },
+    {
+      "scope": "Complete static core library",
+      "before_bytes": 93256022,
+      "after_bytes": 22527256,
+      "reduction_percent": 75.84
+    },
+    {
+      "scope": "Complete app, both unstripped",
+      "before_bytes": 76435573,
+      "after_bytes": 27541612,
+      "reduction_percent": 63.97
+    },
+    {
+      "scope": "Complete app, both metadata stripped",
+      "before_bytes": 68337664,
+      "after_bytes": 25112064,
+      "reduction_percent": 63.25
+    },
+    {
+      "scope": "Original unstripped app to shared-and-stripped candidate",
+      "before_bytes": 76435573,
+      "after_bytes": 25112064,
+      "reduction_percent": 67.15
+    }
+  ],
+  "validation": {
+    "two_complete_generations": "BYTE_IDENTICAL",
+    "emitted_body_reconstruction": "ALL_283586_PASS",
+    "strict_complete_build": "EXIT_0_383_STEPS",
+    "core_units": 103,
+    "unchanged_original_units": 28,
+    "shared_units": 75,
+    "actual_archive_members": 103,
+    "original_global_symbols_retained": 2717,
+    "expected_added_global_symbols": 539,
+    "original_shard_objects_linked": 0,
+    "prebuild_locked_inputs_unchanged": 6850,
+    "actual_core_compiler_read_inputs_prelocked": 150,
+    "all_14_headless_comparisons": "PASS",
+    "natural_ladder": [
+      "300 frames",
+      "600 frames",
+      "10000 frames",
+      "60 guest seconds",
+      "120 guest seconds",
+      "180 guest seconds"
+    ],
+    "saved_checkpoints": [
+      "Ernst sea",
+      "Pietro sea",
+      "Otto sea",
+      "Ali sea",
+      "Catalina fleet",
+      "defeat ending",
+      "saved Continue",
+      "blackjack"
+    ],
+    "framebuffer_native_pcm_and_diagnostics": "MATCH_ORIGINAL",
+    "machine_state_fields": "MATCH_ORIGINAL",
+    "snapshot_raw_byte_identity": false,
+    "snapshot_comparison_exception": "Only existing compiler-proved NHStaticFetch padding ranges [185100,185104), [185116,185120), [185130,185132) and validated derived checksum; no new exclusions",
+    "release_pe_metadata_cleanup": "NONDEBUG_PAYLOAD_AND_LOADER_ABI_PRESERVED",
+    "avg_first_launch": "1frame_completed_before_qualification"
+  },
+  "artifacts": [
+    {
+      "path": "./build/v17c-static-gcc/libuncharted_waters_static_core.a",
+      "bytes": 93256022,
+      "sha256": "c3dfabe58d81656bfd83277b1695f7983a169628e0dfa8b6a0e19718357ac99e"
+    },
+    {
+      "path": "./build/v18c-shared-gcc/libuncharted_waters_static_core.a",
+      "bytes": 22527256,
+      "sha256": "7e173ec5fea1ec2e2490a159dad3fe8a6ca21f9db5b1c411c0c48112a7fd49f2"
+    },
+    {
+      "path": "./build/v18c-shared-gcc/NewHorizonsHeadless.exe",
+      "bytes": 21816407,
+      "sha256": "a5386e6162c52e6e33dc7db6a4e468067b4f6a95986bd2b9d4fffd6143297148"
+    },
+    {
+      "path": "./build/v18c-shared-gcc/release/Launcher.exe",
+      "bytes": 27541612,
+      "sha256": "cee53da3eabaa3e7cb8b0e7c7cf4f97c9495684af2ca337f59b5ac0605799f9d"
+    },
+    {
+      "path": "historical-workspace/temp/V18C-shared-native-20261021/release/Launcher.exe",
+      "bytes": 25112064,
+      "sha256": "2527ffca27f81bff703d115b124fc4837ae0ad434cb87d83d0fdfb13c038363c"
+    },
+    {
+      "path": "historical-workspace/temp/V18C-shared-native-20261021/release/Launcher.debug",
+      "bytes": 2444396,
+      "sha256": "774aaf409cfa913d9f791b8e2c898de877a2231c60b4b73f2428b9f532c695fd"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "../V18C-shared-native-20261021/shared-native-receipt.json",
+      "sha256": "f957d6096117dcbca0398397ce2316255cc84b2f8dea3347bfd0e85815deff69"
+    },
+    {
+      "path": "../V18C-shared-native-20261021/independent-body-join.json",
+      "sha256": "5d52ffe3d2ab3f5daf0a5e0e9931bee8a4f4495bae72022dac1244ef62838e3d"
+    },
+    {
+      "path": "../V18C-shared-native-20261021/deterministic-regeneration.json",
+      "sha256": "af7c0edd8691474dd4ca0906c0ff0bf7a521a381993d22e7b61c9965362d4c61"
+    },
+    {
+      "path": "../V18C-shared-native-20261021/compiled-authority-audit.json",
+      "sha256": "970456a4d444247ed0e66ead8207e3f9adbb8d1c83992e57ee974da5c9065a27"
+    },
+    {
+      "path": "../V18C-shared-native-20261021/compiler-read-binding.json",
+      "sha256": "f1d51cd531c2248c1fcde4ef6475b6d279066d41115edefe780597cadc662be8"
+    },
+    {
+      "path": "../V18C-shared-native-20261021/prebuild-input-lock.json",
+      "sha256": "0e8377caa7b01cff308f74e03079c7cdd2cb2abcddf52439494af12b47bba1d9"
+    },
+    {
+      "path": "../V18C-shared-native-20261021/postbuild-input-check.json",
+      "sha256": "6eacbd6e11c3d5c7ceee027ab17d9ed07c3da556837331f2b9e5e2c68bf43d57"
+    },
+    {
+      "path": "../V18C-shared-native-20261021/context-map.csv",
+      "sha256": "6fe6aac1b3ae2c7779f655ee8096a4cfea5b0c09b42c31bfc8962213efd90298"
+    },
+    {
+      "path": "../V18C-shared-native-20261021/qualification/equivalence.json",
+      "sha256": "305e532dc335ba75b81815c08fb5ebbadc48e8c19ca22e3e890ec86400050790"
+    },
+    {
+      "path": "../V18C-shared-native-20261021/release/symbol-split-receipt.json",
+      "sha256": "5775d1768c1f5b074fb0b319f2e40e26a91f66cd64f9767ba33c31815680d415"
+    }
+  ],
+  "qualification_limitations": [
+    "21 host-only SDL/C++/generated PCH dependencies were inventoried after build, not prelocked; all core compiler-read inputs were prelocked. Do not reinterpret their hashes as pre-build evidence.",
+    "Full cold source-derived whole-core Pass B, evidence-cache mutation checks, headed/physical presentation route and clean-package/cold-extraction certification are not completed by these implementation/headless results."
+  ],
+  "production_state": {
+    "github_release_test_changed_by_shared_compaction": false,
+    "current_release_test_bytes": 68337664,
+    "current_release_test_sha256": "97135817ad2b385fc15420467952e758532e25a089c843933f47ae4131bd87e3",
+    "private_candidate": "../V18C-shared-native-20261021/release/Launcher.exe",
+    "private_symbols": "../V18C-shared-native-20261021/release/Launcher.debug",
+    "promotion": "HELD_FOR_REMAINING_STARTER_18C_GATES"
+  },
+  "cleanup": "Duplicate second-generation native source/context map removed after exact comparison; its receipt retained. Original generated authority, binaries, symbols, saves and settings preserved.",
+  "remaining_implementation_work": "None for the requested shared-native representation and complete headless equivalence. Release promotion/certification is separate and explicitly pending."
+}

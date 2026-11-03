@@ -1,0 +1,57 @@
+name: Windows CI
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: windows-ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  windows-build-test:
+    runs-on: windows-2022
+    timeout-minutes: 45
+    defaults:
+      run:
+        shell: msys2 {0}
+    steps:
+      - name: Preserve committed line endings
+        shell: pwsh
+        run: git config --global core.autocrlf false
+      - name: Check out source
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - name: Set up the released MinGW build toolchain
+        uses: msys2/setup-msys2@ec48f7c5447b3140e2b088413ae3a55687bccb6e # v2
+        with:
+          msystem: MINGW64
+          update: true
+          install: >-
+            mingw-w64-x86_64-gcc
+            mingw-w64-x86_64-cmake
+            mingw-w64-x86_64-ninja
+            mingw-w64-x86_64-python
+      - name: Check portable source and source manifest
+        run: python tools/check_portable_source.py
+      - name: Configure the complete compacted application
+        run: >-
+          cmake -S . -B build/ci -G Ninja -DCMAKE_BUILD_TYPE=Release
+          -DNH_BUILD_WINDOWS_FRONTEND=ON -DNH_SHARED_SOURCE_ROOT="$PWD/compaction"
+          -DNH_SIZE_OPTIMIZED_GENERATED=ON -DNEW_HORIZONS_SDL_SOURCE_DIR="$PWD/third_party/SDL3"
+          -DNH_FRONTEND_BUILD_CONTRACT_TESTS=ON
+      - name: Build Release
+        run: cmake --build build/ci --parallel 2
+      - name: Run ROM-free tests
+        run: ctest --test-dir build/ci/frontend/frontend/windows --output-on-failure --no-tests=error
+      - name: Check real frontend controls without a ROM
+        run: |
+          mkdir -p build/ci/controls
+          build/ci/release/Launcher.exe --presentation-controls-headless "$(cygpath -w "$PWD/build/ci/controls")"
+          cat build/ci/controls/controls-result.txt
+          grep -q '^EXIT 0' build/ci/controls/controls-result.txt

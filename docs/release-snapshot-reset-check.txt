@@ -1,0 +1,9 @@
+PASS wide=0 pass=0 frame=2772 pixels=D15C5AB515A820A9 streamed300 neutral fields
+PASS Reset frame zero, battery unchanged, all1800 opening frames identical to fresh cold boot
+PASS wide=0 pass=1 frame=2772 pixels=D15C5AB515A820A9 streamed300 neutral fields
+PASS wide=0 pass=2 frame=2772 pixels=D15C5AB515A820A9 streamed300 neutral fields
+PASS wide=1 pass=0 frame=2772 pixels=D15C5AB515A820A9 streamed300 neutral fields
+PASS Reset frame zero, battery unchanged, all1800 opening frames identical to fresh cold boot
+PASS wide=1 pass=1 frame=2772 pixels=D15C5AB515A820A9 streamed300 neutral fields
+PASS wide=1 pass=2 frame=2772 pixels=D15C5AB515A820A9 streamed300 neutral fields
+EXIT 0

@@ -1,0 +1,16 @@
+schema=starter-snes-frontend-port-receipt-v1
+reference=Jungle Strike SNES Static Recomp 1.0.0
+source_commit=a16100c5ce0aefec8b7caf8f57c17b771967034a
+source_tag=v1.0.0
+starter_source=Starter-SNES-v12/templates/Frontend/Jungle-Strike-1.0.0-Reference
+copied_on=2026-10-16
+post_release_patch=2026-09-03-rock-1.0.0-f1-focus-restoration
+post_release_patch_source=Junior-Jones/Rock-N-Roll-Racing-SNES-Static-Recomp@c70e50895b706c17d6db944ecedcc3233d7cea2c
+target=Uncharted Waters: New Horizons SNES Static Recomp
+target_adapter=frontend/windows/new_horizons_app_core.c
+target_core_api=../static-core/include/new_horizons_core.h
+foreign_runtime_code_included=false
+foreign_static_core_included=false
+rom_included=false
+build_products_included=false
+status=TARGET_PORT_SOURCE_COMPLETE_NOT_RUNTIME_TESTED

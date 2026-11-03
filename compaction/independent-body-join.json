@@ -1,0 +1,17 @@
+{
+  "schema": "new-horizons-v18c-independent-emitted-body-join-v1",
+  "status": "PASS_EVERY_EMITTED_CONTEXT_RECONSTRUCTS_ORIGINAL_TOKENS",
+  "context_count": 283586,
+  "body_count": 538,
+  "wrapper_count": 2545,
+  "verified_source_files": 2545,
+  "receipt_sha256": "f957d6096117dcbca0398397ce2316255cc84b2f8dea3347bfd0e85815deff69",
+  "verifier_sha256": "4d22cd4d0d237f1207305a11d6a7a8a9c60c11fdd40139e98836db4edfefd528",
+  "emitted_context_body_join_sha256": "5cb4daa71174759e98e685226a043d70de6edf78fa270d9dadff7421de249bca",
+  "exact_key_records": true,
+  "frozen_parameters": true,
+  "original_dispatcher_retained": true,
+  "integer_types_preserved": true,
+  "successor_case_labels_preserved": true,
+  "runtime_build_and_signal_qualification": "REQUIRED_SEPARATELY"
+}

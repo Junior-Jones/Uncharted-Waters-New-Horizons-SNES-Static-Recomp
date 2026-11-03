@@ -1,0 +1,24 @@
+{
+  "schema": "nh09-standard-console-clock-input-profile-v1",
+  "status": "OFFLINE_INPUT_REDUCTION_NOT_STALL_TRANSITION_OR_BOARD_MEASUREMENT_CERTIFICATE",
+  "parent_timing_profile": "config/timing-profile.json",
+  "console_scope": "STANDARD_UNMODIFIED_DISCRETE_S_CPU_REFERENCE_NOT_HVC_TEST_OR_EXTERNAL_HALT_MODE",
+  "pins": {
+    "TCKSEL0": {"package_pin": 41, "level": 0},
+    "TCKSEL1": {"package_pin": 42, "level": 0},
+    "TM": {"package_pin": 73, "level": 0},
+    "HVCMODE": {"package_pin": 74, "level": 0},
+    "HALT": {"package_pin": 75, "level": 0}
+  },
+  "wiring_authority": "https://gamesx.com/wiki/lib/exe/fetch.php?media=schematics%3Apinout_s-cpu.pdf",
+  "wiring_author": "Jonathon W. Donaldson, with Martin Korth credited",
+  "access_scope": "AUTHOR_INDEXED_PIN_TABLE_GND_ROWS_INSPECTED_FULL_PDF_FETCH_AND_VISUAL_REVIEW_UNAVAILABLE",
+  "die_authority_commit": "1c9d162dee51870d7ad8b190d2aa0f39bfd38277",
+  "die_references": ["fastromreg.kicad_sch", "modes.kicad_sch"],
+  "stock_tcksel_decode": "00_SELECTS_ADDRESS_INPUT_PIN2_IN_BOTH_HAUU_MUXES",
+  "mux_polarity_authority": "EMBEDDED_MUX_0_0_TEXT1_AT_UPPER_INPUT2_TEXT0_AT_LOWER_INPUT3",
+  "stock_mode_decode": "MODE0_FROM_HALT_HVCM_TM_ZERO",
+  "native_clock_model_or_public_metadata_changed": false,
+  "native_stall_waveform_selected": false,
+  "not_proved": ["every physical motherboard revision", "pad transitions or alternate test modes", "address arrival relative to CPU_CLK", "refresh/DMA entry and exit math edges", "physical reset initial phase"]
+}

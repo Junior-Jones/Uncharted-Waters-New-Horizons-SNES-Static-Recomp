@@ -1,0 +1,68 @@
+{
+  "status": "PASS_COMPLETE_ARCHIVE_AND_SYMBOL_AUTHORITY_SELECTION",
+  "core_units": 103,
+  "archive_members": 103,
+  "old_global_symbols": 2717,
+  "new_global_symbols": 3256,
+  "added_shared_body_symbols": 539,
+  "removed_global_symbols": 0,
+  "original_shard_objects_linked": 0,
+  "global_symbol_names_sha256": "f6c9daa20ec928e09fe00d74374aa79c2ca26d9854581743272c5f0bbe92857b",
+  "actual_compiler_read_files": 1171,
+  "prelocked_read_files": 1150,
+  "unbound_read_files": [
+    "C:\\msys64\\mingw64\\include\\c++\\16.1.0\\bit",
+    "C:\\msys64\\mingw64\\include\\c++\\16.1.0\\cmath",
+    "C:\\msys64\\mingw64\\include\\c++\\16.1.0\\concepts",
+    "C:\\msys64\\mingw64\\include\\c++\\16.1.0\\cstdlib",
+    "C:\\msys64\\mingw64\\include\\c++\\16.1.0\\limits",
+    "C:\\msys64\\mingw64\\include\\c++\\16.1.0\\tr1\\bessel_function.tcc",
+    "C:\\msys64\\mingw64\\include\\c++\\16.1.0\\tr1\\beta_function.tcc",
+    "C:\\msys64\\mingw64\\include\\c++\\16.1.0\\tr1\\ell_integral.tcc",
+    "C:\\msys64\\mingw64\\include\\c++\\16.1.0\\tr1\\exp_integral.tcc",
+    "C:\\msys64\\mingw64\\include\\c++\\16.1.0\\tr1\\gamma.tcc",
+    "C:\\msys64\\mingw64\\include\\c++\\16.1.0\\tr1\\hypergeometric.tcc",
+    "C:\\msys64\\mingw64\\include\\c++\\16.1.0\\tr1\\legendre_function.tcc",
+    "C:\\msys64\\mingw64\\include\\c++\\16.1.0\\tr1\\modified_bessel_func.tcc",
+    "C:\\msys64\\mingw64\\include\\c++\\16.1.0\\tr1\\poly_hermite.tcc",
+    "C:\\msys64\\mingw64\\include\\c++\\16.1.0\\tr1\\poly_laguerre.tcc",
+    "C:\\msys64\\mingw64\\include\\c++\\16.1.0\\tr1\\riemann_zeta.tcc",
+    "C:\\msys64\\mingw64\\include\\c++\\16.1.0\\type_traits",
+    "C:\\msys64\\mingw64\\include\\swprintf.inl",
+    "third_party/SDL3/src/hidapi/windows/hid.c",
+    "third_party/SDL3/src/hidapi/windows/hidapi_descriptor_reconstruct.c",
+    "./build/v18c-shared-gcc/sdl/CMakeFiles/SDL3-static.dir/cmake_pch.hxx"
+  ],
+  "artifacts": [
+    {
+      "path": "./build/v17c-static-gcc/libuncharted_waters_static_core.a",
+      "bytes": 93256022,
+      "sha256": "c3dfabe58d81656bfd83277b1695f7983a169628e0dfa8b6a0e19718357ac99e"
+    },
+    {
+      "path": "./build/v18c-shared-gcc/libuncharted_waters_static_core.a",
+      "bytes": 22527256,
+      "sha256": "7e173ec5fea1ec2e2490a159dad3fe8a6ca21f9db5b1c411c0c48112a7fd49f2"
+    },
+    {
+      "path": "./build/v18c-shared-gcc/NewHorizonsHeadless.exe",
+      "bytes": 21816407,
+      "sha256": "a5386e6162c52e6e33dc7db6a4e468067b4f6a95986bd2b9d4fffd6143297148"
+    },
+    {
+      "path": "./build/v18c-shared-gcc/release/Launcher.exe",
+      "bytes": 27541612,
+      "sha256": "cee53da3eabaa3e7cb8b0e7c7cf4f97c9495684af2ca337f59b5ac0605799f9d"
+    },
+    {
+      "path": "historical-workspace/temp/V18C-shared-native-20261021/release/Launcher.exe",
+      "bytes": 25112064,
+      "sha256": "2527ffca27f81bff703d115b124fc4837ae0ad434cb87d83d0fdfb13c038363c"
+    },
+    {
+      "path": "historical-workspace/temp/V18C-shared-native-20261021/release/Launcher.debug",
+      "bytes": 2444396,
+      "sha256": "774aaf409cfa913d9f791b8e2c898de877a2231c60b4b73f2428b9f532c695fd"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "new-horizons-scpu-context-intelligence-v1",
+  "milestone": "04C",
+  "member_context_manifest": "docs/V04C-contexts.csv",
+  "member_context_manifest_sha256": "1b7bf0f93aefd86b782376aedfb4e339162cda3b9c03340f01e06eeda3399e42",
+  "sidecar": "docs/V04C-context-intelligence.csv",
+  "sidecar_sha256": "7bdf8ab630ca8e0f1aa25a4815354b92c0d71d83ab186f9bd242702a74ede84f",
+  "deferred_obligations": [
+    {"owner": "05C", "kind": "RETURN_CONTINUATION", "source": "C0:8054:0:1:0", "detail": "C0:8057:0:1:0"},
+    {"owner": "05C", "kind": "RETURN_OR_REENTRY", "source": "C0:8173:0:1:0", "detail": "RTS"}
+  ],
+  "runtime_policy": {
+    "compiled_into_runtime": false,
+    "minimum_context_key": "PBR:PC:E:M:X",
+    "runtime_context_key_extension_allowed": false,
+    "sidecar_may_authorize_context_by_itself": false,
+    "duplicate_full_disassembly_in_each_record": false
+  },
+  "reuse_policy": {
+    "content_addressed": true,
+    "deduplicate_obligations": true,
+    "invalidate_only_dependency_intersection": true,
+    "version_number_is_cache_input": false
+  }
+}

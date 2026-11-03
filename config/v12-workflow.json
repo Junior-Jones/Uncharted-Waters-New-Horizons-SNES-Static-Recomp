@@ -1,0 +1,23 @@
+{
+  "schema": "new-horizons-v12-workflow-v1",
+  "status": "CLOSED_STATIC_IPL_EVENT_PLAN_HALF_PHASE_AND_POST_CORRECTION_RUNTIME_RECONCILED",
+  "starter_owner": "12C",
+  "previous_milestone": "docs/V11C-MILESTONE.md",
+  "method_reference": "Starter SNES v10 12C; Theme Park V12 and direct local Rock n Roll Racing, Jungle Strike, Gundam Wing, SimCity, Top Gear and Civilization method review; methods only",
+  "exact_apuio_contexts": 48,
+  "exact_apuio_events": 52,
+  "upload_epochs": 1,
+  "uploaded_bytes": 7029,
+  "upload_destination": "$0800-$2374",
+  "static_entry_pc": "$081A",
+  "source_join": "docs/V12C-apu-source-join-summary.json",
+  "aram_epoch": "docs/V12C-aram-epoch-receipt.json",
+  "sole_bus_owner": "NH_OWNER_APUIO_12 through NHBusPorts.apuio",
+  "selected_source_count_after_apu": 2556,
+  "focused_gcc_syntax_check": "PASS_STATIC_LIBRARY_AND_FOCUSED_RUNTIME",
+  "spc700_execution_claimed": true,
+  "sdsp_or_pcm_claimed": false,
+  "static_compile_receipt": "docs/V12C-static-compile-receipt.json",
+  "verification_summary": "docs/V12C-verification-summary.json",
+  "goal_complete": true
+}

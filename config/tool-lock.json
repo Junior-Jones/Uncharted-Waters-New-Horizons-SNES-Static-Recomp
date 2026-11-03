@@ -1,0 +1,17 @@
+{
+  "schema": "new-horizons-tool-lock-v1",
+  "starter": {
+    "identity": "Starter SNES v10",
+    "version": 10,
+    "archive": "historical-inputs/Starter Snes v10.zip",
+    "source_commit_from_VERSION": "a16100c5ce0aefec8b7caf8f57c17b771967034a"
+  },
+  "python": {
+    "version": "3.14.6",
+    "path": "C:/msys64/mingw64/bin/python.exe",
+    "purpose": "analysis generation and tests only"
+  },
+  "hash_algorithm": "SHA-256",
+  "native_tools": "config/compiler-inventory.json",
+  "native_compile_policy": "PROHIBITED_UNTIL_COMPLETE_RECONCILED_07C_AND_THEN_TEMP_TREE_ONLY"
+}

@@ -1,0 +1,51 @@
+{
+  "status": "PASS_FINAL_IMPLEMENTATION_AND_HEADLESS_COMPLETION_AUDIT_NOT_RELEASE_CERTIFICATION",
+  "contexts": 283586,
+  "shared_bodies": 538,
+  "qualification_cases": 14,
+  "all_generated_hashes_unchanged": true,
+  "all_artifact_hashes_unchanged": true,
+  "release_test_unchanged": true,
+  "evidence": [
+    {
+      "path": "../V18C-shared-native-20261021/shared-native-receipt.json",
+      "sha256": "f957d6096117dcbca0398397ce2316255cc84b2f8dea3347bfd0e85815deff69"
+    },
+    {
+      "path": "../V18C-shared-native-20261021/independent-body-join.json",
+      "sha256": "5d52ffe3d2ab3f5daf0a5e0e9931bee8a4f4495bae72022dac1244ef62838e3d"
+    },
+    {
+      "path": "../V18C-shared-native-20261021/deterministic-regeneration.json",
+      "sha256": "af7c0edd8691474dd4ca0906c0ff0bf7a521a381993d22e7b61c9965362d4c61"
+    },
+    {
+      "path": "../V18C-shared-native-20261021/compiled-authority-audit.json",
+      "sha256": "970456a4d444247ed0e66ead8207e3f9adbb8d1c83992e57ee974da5c9065a27"
+    },
+    {
+      "path": "../V18C-shared-native-20261021/compiler-read-binding.json",
+      "sha256": "f1d51cd531c2248c1fcde4ef6475b6d279066d41115edefe780597cadc662be8"
+    },
+    {
+      "path": "../V18C-shared-native-20261021/prebuild-input-lock.json",
+      "sha256": "0e8377caa7b01cff308f74e03079c7cdd2cb2abcddf52439494af12b47bba1d9"
+    },
+    {
+      "path": "../V18C-shared-native-20261021/postbuild-input-check.json",
+      "sha256": "6eacbd6e11c3d5c7ceee027ab17d9ed07c3da556837331f2b9e5e2c68bf43d57"
+    },
+    {
+      "path": "../V18C-shared-native-20261021/context-map.csv",
+      "sha256": "6fe6aac1b3ae2c7779f655ee8096a4cfea5b0c09b42c31bfc8962213efd90298"
+    },
+    {
+      "path": "../V18C-shared-native-20261021/qualification/equivalence.json",
+      "sha256": "305e532dc335ba75b81815c08fb5ebbadc48e8c19ca22e3e890ec86400050790"
+    },
+    {
+      "path": "../V18C-shared-native-20261021/release/symbol-split-receipt.json",
+      "sha256": "5775d1768c1f5b074fb0b319f2e40e26a91f66cd64f9767ba33c31815680d415"
+    }
+  ]
+}

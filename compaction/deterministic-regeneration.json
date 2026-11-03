@@ -1,0 +1,8 @@
+{
+  "status": "PASS_IDENTICAL_TWO_FULL_NATIVE_GENERATIONS",
+  "receipt_sha256": "f957d6096117dcbca0398397ce2316255cc84b2f8dea3347bfd0e85815deff69",
+  "output_files": 77,
+  "contexts": 283586,
+  "context_map_sha256": "6fe6aac1b3ae2c7779f655ee8096a4cfea5b0c09b42c31bfc8962213efd90298",
+  "generator_sha256": "c52dd595fa5f3eecd83a2ebcb2e6ba424f70968158b4ede849062baa9cd829db"
+}

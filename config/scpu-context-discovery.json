@@ -1,0 +1,39 @@
+{
+  "schema": "new-horizons-scpu-context-discovery-v1",
+  "milestone": "04C",
+  "canonical_rom_sha256": "64bc4707f422661a66618088887e2363a5f896ea683c58984fffd96dd21ab5f0",
+  "mapper_profile_sha256": "ecc815e33f615fc3efa614dc42ab5e2668de74b3c2f8bd58c96c35dbcac49065",
+  "decoder_semantic_sha256": "914698dc0b12dea54229d3b319c9463d4a0c2d8211977dc655239935e954ddf9",
+  "context_policy": "PBR:PC:E:M:X",
+  "context_policy_sha256": "c378123b0a26a5741f6f3868ca80f7101926c22b19317a8b32073a84d66cd639",
+  "proved_root_set_sha256": "1424d246cbb1ee6f0aecc10f5515f5f259b406e854fad58720991bb9e584319c",
+  "dynamic_flow_proof_set_sha256": "cfd48094f7b210049ec1b8b119df87a809332db79e9a156585d8267acbe294b2",
+  "executable_memory_epoch_sha256": "403ca6c560f4506bae91fbc6a24b479e6d5b8b3969331d7dbc5ce6069d2689c5",
+  "exact_context_manifest_sha256": "1b7bf0f93aefd86b782376aedfb4e339162cda3b9c03340f01e06eeda3399e42",
+  "cache_policy": {
+    "unit": "PER_CONTEXT_OR_COMPLETE_PROOF_GROUP",
+    "version_number_is_cache_input": false,
+    "negative_results_reusable": true,
+    "reuse_requires_all_governing_hashes_identical": true,
+    "cold_empty_cache_reconciliation_result": "PASS"
+  },
+  "universes": {
+    "lexical_candidate_rows": 10485760,
+    "discovered_exact_contexts": 123,
+    "unique_exact_cpu_addresses": 123,
+    "admitted_production_contexts": 0
+  },
+  "closure": {
+    "direct_edges": 122,
+    "byte_ownership_conflicts": 0,
+    "contradictory_decode_conflicts": 0,
+    "deferred_05c_frontiers": 2,
+    "runtime_decoder_allowed": false,
+    "unknown_production_context_fallback_allowed": false
+  },
+  "compile_decision": {
+    "compile_required": false,
+    "generated_or_native_surface_changed": false,
+    "reason": "04C is offline discovery; compiler use is prohibited through completion of 07C"
+  }
+}

@@ -1,0 +1,77 @@
+Uncharted Waters: New Horizons — final frontend/package verification
+2026-10-22
+
+Accepted executable
+-------------------
+Unstripped Launcher SHA256:
+e13d5b5622d2b7c07b9ecf3a5883ea190ac00d2d99cd52d487813dc0a4e71124
+Stripped Launcher SHA256:
+fc28411baba8cbb24783559a11c94d001e38c5ed996d9d9b660202d19b9eea93
+Stripped size25,115,648 bytes. Complete native core archive22,528,016 bytes.
+PE strip receipt proves nondebug runtime sections and loader ABI unchanged.
+Only Windows system DLL imports remain; SDL/MinGW runtimes are static.
+
+User listening result
+---------------------
+User confirmed title music had no crackling with the final scheduler guard
+and128-native-frame streamed PCM delivery. Listening instance PID7232 stopped
+at their request, with no remaining Launcher at that point. No full-game or
+all-device audio certification is inferred. See the audio reference review.
+
+Final frontend check (same accepted runtime, private settings muted)
+------------------------------------------------------------------
+The existing production Launcher was reused, not a test harness compiled.
+1 in active game created snapshot-slot-1.nhsnap,697504 bytes at09:43:55.
+F2 from active game opened the five-slot modal. Slot2 saved and closed the
+dialog, creating snapshot-slot-2.nhsnap,697504 bytes at09:44:24.
+After Escape to Launcher,1 reported "Return to the game before saving a
+snapshot." Both snapshot timestamps remained unchanged. F2 was also rejected
+without opening a Save window. The source additionally checks foreground
+ownership, window enabled, live game, unpaused and gameplay presentation.
+The gameplay-opened modal is deliberately authorized for its own slot buttons.
+
+F1 displayed Welcome with Escape,1,2,then uninterrupted F1-F8; added text says
+saving requires gameplay and controls are Player1 only. No clipping observed.
+F5 displayed "Player 1 input", one method selector and one12-control binding
+set, with no multiplayer selector. No physical gamepad was connected, so its
+physical buttons were not tested. The source owns one gamepad object and maps
+only Player1/pad0. Default controls match README.txt.
+
+Exact create_menu_bar function comparison against Starter SNES v12's Jungle
+Strike1.0.0 reference matched after newline normalization. File/Settings menus
+and existing toolbar order/geometry were retained, not redesigned.
+Private UI check app was stopped and the pre-check private settings restored.
+No additional gameplay route or speaker-listening run was performed.
+
+Documentation and delivery scope
+--------------------------------
+README.txt and VERSION.txt follow the local Rock n' Roll Racing and Gundam
+Wing1.0.0 release layouts, with NH-specific facts and honest validation scope.
+The new clean Source includes the selected current core, original authority,
+shared native stage and local SDL3.4.10 source dependency. Historical old Source
+is moved to archive before replacement. User Test runtime files are preserved.
+Delivery hashes and archive contents are checked at the final copying step.
+Full cold Pass-B and every possible gameplay/audio branch are not certified.
+
+Final delivery result
+---------------------
+Github/Source contains the current core, shared native stage, frontend, original
+authority and SDL3.4.10 dependency. Fresh source-only CMake configuration passed
+without neighboring-project dependencies;103 selected core units match the
+accepted production selection.4946 source/dependency files were independently
+hash-compared against their working origins. No redundant application rebuild.
+The private configure path triggered a long-object-path warning; the documented
+shorter Source/build/release location avoids that private-path length. No ROM,
+runtime data, compiled libraries, executables or debug symbols in Source.
+
+Github/Release and Github/Test both contain the seven clean release files,
+byte-identical to the ZIP entries. Existing Test settings, Saves and Logs were
+hash-checked unchanged. Previous delivery is recoverable under the project's
+archive/20261022-before-final-delivery folder. Nothing was pushed online.
+
+Uncharted-Waters-New-Horizons-1.0.0-Windows-x64.zip:
+10,016,897 bytes; SHA256
+c0f092ed055e99ec9d2badf10b0a49bc5873bc8118126c472f7279917258579d
+SOURCE-MANIFEST.csv inventories the exported source; RELEASE-MANIFEST.csv
+inventories the seven delivered release files. All app checks ended; no
+intentional Launcher process remains running.

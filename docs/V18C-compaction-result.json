@@ -1,0 +1,118 @@
+{
+  "schema": "new-horizons-v18c-compaction-qualification-v1",
+  "status": "COMPACTION_BUILT_AND_HEADLESS_VERIFIED_NOT_PROMOTED",
+  "date": "2026-10-21",
+  "source_authority": {
+    "contexts_before": 283586,
+    "contexts_after": 283586,
+    "contexts_removed": 0,
+    "unique_context_keys": 283586,
+    "families": 965,
+    "selected_units": 2573,
+    "compacted_shards": 2545,
+    "compiler_expanded_token_equivalence": "PASS_ALL_2545_SHARDS"
+  },
+  "sizes": {
+    "scpu_source_before": 292343715,
+    "scpu_source_after_including_new_helpers": 197828231,
+    "core_library_before": 93256022,
+    "core_library_after": 81113884,
+    "headless_before": 70710368,
+    "headless_after": 62543456,
+    "launcher_before": 76435573,
+    "launcher_after": 68268661
+  },
+  "native_audit": {
+    "archive_members_before": 2573,
+    "archive_members_after": 2573,
+    "member_differences": 0,
+    "global_symbols_before": 2717,
+    "global_symbols_after": 2717,
+    "symbol_differences": 0,
+    "size_optimized_generated_units": 2547,
+    "handwritten_hardware_owner_size_options_changed": false,
+    "locked_baseline_inputs_verified": 2601,
+    "baseline_inputs_changed": 0,
+    "compacted_inputs_changed": 0
+  },
+  "qualification": {
+    "cases": 14,
+    "status": "PASS_EXACT_OUTPUT_STATE_PCM_AND_DIAGNOSTIC_EQUIVALENCE",
+    "natural_ladder": [
+      "300 frames",
+      "600 frames",
+      "10000 frames",
+      "60 guest seconds",
+      "120 guest seconds",
+      "180 guest seconds"
+    ],
+    "snapshot_contract": "All state fields identical; excludes only ten compiler-proved NHStaticFetch ABI-padding bytes and their validated raw-payload checksum. Same original executable repeat also differs in this padding. Raw snapshots retained.",
+    "padding_core_ranges": [
+      [
+        185100,
+        185104
+      ],
+      [
+        185116,
+        185120
+      ],
+      [
+        185130,
+        185132
+      ]
+    ],
+    "native_snapshot_abi_and_legacy_build_guard_unchanged": true,
+    "production_core_semantics_edited": false
+  },
+  "artifacts": [
+    {
+      "path": "build/v17c-static-gcc/libuncharted_waters_static_core.a",
+      "bytes": 93256022,
+      "sha256": "c3dfabe58d81656bfd83277b1695f7983a169628e0dfa8b6a0e19718357ac99e"
+    },
+    {
+      "path": "build/v18c-size-gcc/libuncharted_waters_static_core.a",
+      "bytes": 81113884,
+      "sha256": "8903c4fed475599ee9d8a310037e2bf8f9720cdb2ef639906d0a5a68df880f61"
+    },
+    {
+      "path": "build/v17c-static-gcc/NewHorizonsHeadless.exe",
+      "bytes": 70710368,
+      "sha256": "74ea0be505cd4dd496fecb3a092e4c308fbd3d6950ea5b390b20f0a3115d934f"
+    },
+    {
+      "path": "build/v18c-size-gcc/NewHorizonsHeadless.exe",
+      "bytes": 62543456,
+      "sha256": "31198f5f2161d173c829d4cad9594f1927a94998cdf352d6ece9b6aff85730b2"
+    },
+    {
+      "path": "build/v18c-size-gcc/release/Launcher.exe",
+      "bytes": 68268661,
+      "sha256": "ebc52530ddfb3f9506858beb7aa009e0f8ef85757f7ad258e9ff7cd5851cbf4b"
+    },
+    {
+      "path": "tools/v18_compact.py",
+      "bytes": 8138,
+      "sha256": "bb458a0fe68a325ca36c5cfde7688f6826253c266ba57bf1c56d2500e89286aa"
+    },
+    {
+      "path": "tools/v18_qualify.py",
+      "bytes": 7242,
+      "sha256": "6d2d64319d8406c003e300187952bbf610086c538dfc2e15821e1d784a66bc0f"
+    }
+  ],
+  "evidence": {
+    "stage": "../V18C-compaction-20261021",
+    "transformation": "compaction-receipt.json",
+    "tokens": "compiler-token-equivalence.json",
+    "headless": "qualification/equivalence.json",
+    "layout_proof": "layout_probe.c and layout_probe.s"
+  },
+  "promotion": {
+    "release_test_replaced": false,
+    "headed_confirmation": "PENDING",
+    "cold_whole_core_pass_b": "PENDING",
+    "formal_18c_certificate": "NOT_ISSUED",
+    "basic_gameplay_testing": "USER_ACCEPTED_COMPLETE_DO_NOT_RESUME_EXPLORATION"
+  }
+}
