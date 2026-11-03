@@ -44,7 +44,11 @@ int main(void) {
     second_count = new_horizons_audio_resampler_process(
         &two, input + 1703u * 2u, INPUT_FRAMES - 1703u,
         split + first_count * 2u, OUTPUT_CAPACITY - first_count);
-    if (complete_count < 4799u || complete_count > 4801u) {
+    /* Streaming interpolation retains all input frames. The former 4800
+     * expectation assumed four startup frames were discarded. At 3:2 the
+     * inclusive initial phase permits one endpoint sample of rounding. */
+    if (complete_count < INPUT_FRAMES * 3u / 2u - 1u ||
+        complete_count > INPUT_FRAMES * 3u / 2u + 1u) {
         fprintf(stderr, "unexpected output count: %zu\n", complete_count);
         return 1;
     }
