@@ -1,5 +1,7 @@
 # Uncharted Waters: New Horizons — Windows source 1.0.0
 
+<a href="https://recomplauncher.com/game/uncharted-waters-new-horizons-snes-static-recomp"><picture><source media="(prefers-color-scheme: dark)" srcset="https://recomplauncher.com/assets/press/launcher/badge-light.svg"><img alt="Get it on RecompLauncher" src="https://recomplauncher.com/assets/press/launcher/badge-dark.svg" height="48"></picture></a>
+
 [![Windows CI](https://github.com/Junior-Jones/Uncharted-Waters-New-Horizons-SNES-Static-Recomp/actions/workflows/windows-ci.yml/badge.svg)](https://github.com/Junior-Jones/Uncharted-Waters-New-Horizons-SNES-Static-Recomp/actions/workflows/windows-ci.yml)
 
 Native static recompilation for Windows 10/11 x64. Download the portable app
