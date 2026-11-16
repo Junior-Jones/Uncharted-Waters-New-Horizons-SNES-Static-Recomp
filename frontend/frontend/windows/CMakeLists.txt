@@ -198,5 +198,8 @@ add_custom_command(TARGET new-horizons-launcher POST_BUILD
   COMMAND "${CMAKE_COMMAND}" -E copy_if_different
     "${NEW_HORIZONS_FRONTEND_ROOT}/licenses/SDL-LICENSE.txt"
     "$<TARGET_FILE_DIR:new-horizons-launcher>/SDL-LICENSE.txt"
+  COMMAND "${CMAKE_COMMAND}" -E copy_if_different
+    "${NEW_HORIZONS_SOURCE_ROOT}/recomplauncher.json"
+    "$<TARGET_FILE_DIR:new-horizons-launcher>/recomplauncher.json"
   VERBATIM
 )
