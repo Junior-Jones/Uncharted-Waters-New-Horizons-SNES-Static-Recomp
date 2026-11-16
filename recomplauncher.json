@@ -1,0 +1,99 @@
+{
+    "$schema": "https://recomplauncher.com/schema/recomplauncher.json",
+    "format": 1,
+    "name": "Uncharted Waters: New Horizons",
+    "repo": "Junior-Jones/Uncharted-Waters-New-Horizons-SNES-Static-Recomp",
+    "game": {
+        "kind": "iso",
+        "label": "Your own USA or Canada NTSC SNES ROM of Uncharted Waters: New Horizons (a .sfc or .smc file)."
+    },
+    "start": {
+        "program": [
+            "Launcher.exe"
+        ]
+    },
+    "config": [
+        {
+            "id": "main",
+            "format": "ini",
+            "file": [
+                {
+                    "path": "{install}/settings.ini"
+                }
+            ],
+            "game_path": "ROM/Path"
+        }
+    ],
+    "saves": [
+        "{install}/Saves"
+    ],
+    "folders": {
+        "saves": [
+            {
+                "path": "{install}/Saves"
+            }
+        ],
+        "logs": [
+            {
+                "path": "{install}/Logs"
+            }
+        ]
+    },
+    "settings": [
+        {
+            "id": "fullscreen",
+            "label": "Full screen on Play",
+            "help": "Opens the game full screen when Play starts.",
+            "in": "main",
+            "choices": [
+                {
+                    "label": "On",
+                    "set": {
+                        "General/FullScreenOnPlay": "1"
+                    }
+                },
+                {
+                    "label": "Off",
+                    "set": {
+                        "General/FullScreenOnPlay": "0"
+                    }
+                }
+            ],
+            "defaults": {
+                "General/FullScreenOnPlay": "0"
+            }
+        },
+        {
+            "id": "widescreen",
+            "label": "Widescreen (experimental)",
+            "help": "An experimental 16:9 outdoor port. Fixed indoor scenes keep their original layout.",
+            "in": "args",
+            "choices": [
+                {
+                    "label": "Original",
+                    "args": []
+                },
+                {
+                    "label": "Widescreen",
+                    "args": [
+                        "--port-widescreen"
+                    ]
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "id": "saves",
+            "label": "Saves",
+            "help": "In-game battery saves and snapshots.",
+            "open": "saves"
+        }
+    ],
+    "requires": [
+        "start",
+        "settings.ini",
+        "settings.choices",
+        "settings.args"
+    ]
+}
