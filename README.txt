@@ -1,5 +1,5 @@
 Uncharted Waters: New Horizons (SNES) Static Recompilation
-Version 1.0.0
+Version 1.0.1
 
 Running the application
 -----------------------
@@ -84,7 +84,7 @@ Logs; closing the error window does not activate an emulator fallback.
 Audio transport faults also produce diagnostic logs without a popup.
 
 Please report issues using the Issues tab on this project's GitHub repository.
-Include version 1.0.0, steps to reproduce, whether widescreen was enabled,
+Include version 1.0.1, steps to reproduce, whether widescreen was enabled,
 and a screenshot or failure log where possible. Do not share the game ROM.
 
 Build from source
@@ -95,8 +95,33 @@ and CMake 3.28 or newer. See Source/README.md for the exact build commands.
 
 Package contents
 ----------------
-Launcher.exe, README.txt, VERSION.txt, SDL-LICENSE.txt,
-THIRD-PARTY-NOTICES.txt, and Rom / Screenshots instruction folders.
+Launcher.exe, recomplauncher.json, README.txt, VERSION.txt, SDL-LICENSE.txt,
+and THIRD-PARTY-NOTICES.txt at the top level of the Windows ZIP.
+Rom, Saves and Screenshots are created by the application when needed;
+no personal runtime data is included in the release.
 No ROM, user data, development executables or debug symbols are distributed.
 Uncharted Waters: New Horizons and its original assets belong to their
 respective rights holders and are not included.
+
+
+RecompLauncher and shortcuts
+-----------------------------------------------------
+Launch directly with: Launcher.exe --game "C:\Games\My ROMs\New Horizons.sfc"
+The normal verified ROM loader starts play without a Run click, even when
+Auto Run on Load is off. Spaces and Unicode paths are supported. An invalid
+path or ROM reports the normal loader error without loading another ROM.
+Without --game, the existing Welcome and GUI startup flow still applies.
+
+--port-widescreen enables the experimental display; --port-wide-canvas is an
+alias. --no-port-widescreen explicitly selects Original. Options may appear
+before or after --game and its path. Explicit display flags override saved
+settings, and the last display flag wins. The resulting setting is saved
+when you exit normally, just like the toolbar setting.
+
+RecompLauncher passes --game and your selected ROM and maps Original and
+Widescreen to Display/Widescreen=0/1 in settings.ini. Its fullscreen setting
+maps to General/FullScreenOnPlay. Play leaves General/AutoRunOnLoad unchanged.
+Do not copy someone else's settings.ini or Saves into your installation.
+
+Original RecompLauncher manifest, badge and CMake-copy proposal:
+Ruben Ripalda (elripalda), GitHub pull request #2.

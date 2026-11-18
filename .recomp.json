@@ -30,7 +30,7 @@
     },
     {
       "label": "Windows x64 release",
-      "url": "https://github.com/Junior-Jones/Uncharted-Waters-New-Horizons-SNES-Static-Recomp/releases/tag/v1.0.0"
+      "url": "https://github.com/Junior-Jones/Uncharted-Waters-New-Horizons-SNES-Static-Recomp/releases/tag/v1.0.1"
     }
   ],
   "notes": "Portable Windows 10/11 x64 release with keyboard and gamepad input, in-game battery saves, snapshots and audio. Optional 16:9 widescreen is experimental, disabled by default and only partially qualified; unsupported scenes retain their original layout. Release checks are scoped smoke, control and snapshot/reset checks, not a complete playthrough or exhaustive gameplay/audio certification.",

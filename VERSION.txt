@@ -1,12 +1,18 @@
 Uncharted Waters: New Horizons (SNES) Static Recompilation
-Version: 1.0.0
+Version: 1.0.1
 Platform: Native 64-bit Windows 10 and Windows 11
 Executable: Launcher.exe
-Release date: 3 November 2026
+Release date: 18 November 2026
 ROM: USA/Canada NTSC; supplied separately, never included
 
-Version 1.0.0 features
+Version 1.0.1 update
 ----------------------
+- RecompLauncher manifest, portable saves/log paths and README badge.
+- --game starts a verified ROM directly; display flags combine with other args.
+- Original and Widescreen settings map explicitly to 0 and 1.
+
+Retained application features
+----------------------------
 - Native Win32 frontend, Welcome window, menus and toolbar.
 - Configurable one-player keyboard and statically linked SDL3 gamepad input.
 - Windowed/full-screen display, integer scaling and optional FPS display.
@@ -32,7 +38,7 @@ Coverage is partial; some scenes retain the original display. This release
 does not claim every menu, special effect, introduction or ending is widened.
 Disable Widescreen to restore the original image/layout without resetting.
 
-Release checks
+Base 1.0.0 release checks
 --------------
 The native frontend menu/toolbar check verifies notice creation, bottom Close,
 acceptance, saved acknowledgement, reloaded suppression and shared ON/OFF
@@ -49,9 +55,9 @@ Canonical ROM SHA-256:
 
 Core compatibility identity:
 027cba0db596385278959109404981e52e898ca83bd549b5e782faf23ed7b64e
-Launcher.exe size: 25253888 bytes
+Launcher.exe size: 25254400 bytes
 Launcher.exe SHA-256:
-b23d257b5ebad16080b5c5debf49318df8aa47fe82995d7e050faa7f802d8bc4
+03fba545ef46b9b67bf96e7ce3e936ea7d311194bddc287e9ed7ac5d9bd7c746
 
 Feedback: use the Issues tab on this project's GitHub repository.
 Please include the version, reproduction steps, widescreen ON/OFF state and

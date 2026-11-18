@@ -10,6 +10,10 @@
     "start": {
         "program": [
             "Launcher.exe"
+        ],
+        "args": [
+            "--game",
+            "{game}"
         ]
     },
     "config": [
@@ -67,19 +71,24 @@
             "id": "widescreen",
             "label": "Widescreen (experimental)",
             "help": "An experimental 16:9 outdoor port. Fixed indoor scenes keep their original layout.",
-            "in": "args",
+            "in": "main",
             "choices": [
                 {
                     "label": "Original",
-                    "args": []
+                    "set": {
+                        "Display/Widescreen": "0"
+                    }
                 },
                 {
                     "label": "Widescreen",
-                    "args": [
-                        "--port-widescreen"
-                    ]
+                    "set": {
+                        "Display/Widescreen": "1"
+                    }
                 }
-            ]
+            ],
+            "defaults": {
+                "Display/Widescreen": "0"
+            }
         }
     ],
     "actions": [
@@ -93,7 +102,6 @@
     "requires": [
         "start",
         "settings.ini",
-        "settings.choices",
-        "settings.args"
+        "settings.choices"
     ]
 }

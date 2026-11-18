@@ -1,4 +1,4 @@
-# Uncharted Waters: New Horizons — Windows source 1.0.0
+# Uncharted Waters: New Horizons — Windows source 1.0.1
 
 <a href="https://recomplauncher.com/game/uncharted-waters-new-horizons-snes-static-recomp"><picture><source media="(prefers-color-scheme: dark)" srcset="https://recomplauncher.com/assets/press/launcher/badge-light.svg"><img alt="Get it on RecompLauncher" src="https://recomplauncher.com/assets/press/launcher/badge-dark.svg" height="48"></picture></a>
 
@@ -11,10 +11,10 @@ USA/Canada NTSC ROM; no ROM or original game assets are distributed.
 Report ordinary problems through [GitHub Issues](https://github.com/Junior-Jones/Uncharted-Waters-New-Horizons-SNES-Static-Recomp/issues).
 
 Current source for the compacted native Windows application packaged on
-2026-11-03. The game ROM and user data are not included. Runtime instructions
+2026-11-18. The game ROM and user data are not included. Runtime instructions
 are in README.txt; release details and the shipped executable hash are in
 VERSION.txt. Widescreen remains experimental and only partially qualified.
-See docs/RELEASE-1.0.0.md for the release scope.
+See docs/RELEASE-1.0.1.md for this update and docs/RELEASE-1.0.0.md for the base release scope.
 See docs/20261103-SNAPSHOT-RESET-FIX.md for the reset and snapshot-load correction.
 
 The app stores settings, in-game battery saves and snapshots beside the EXE.
@@ -44,6 +44,29 @@ For the existing headless connector, configure additionally with
 It produces build/release/NewHorizonsHeadless.exe. This optional development
 target is not part of the Windows release. No contract-test executables are
 built by default.
+
+## Launch from RecompLauncher or a shortcut
+
+The original manifest, badge and CMake-copy integration were proposed by
+Ruben Ripalda ([elripalda](https://github.com/elripalda)) in
+[PR #2](https://github.com/Junior-Jones/Uncharted-Waters-New-Horizons-SNES-Static-Recomp/pull/2).
+
+`Launcher.exe --game "C:\Games\My ROMs\New Horizons.sfc"` loads and starts
+that ROM through the normal verified loader, regardless of Auto Run on Load.
+Quoted paths with spaces and Unicode are supported. Invalid ROMs report the
+normal loader error without falling back to a different saved ROM. Without
+`--game`, the existing welcome and GUI startup behavior is unchanged.
+
+`--port-widescreen` (also `--port-wide-canvas`) enables experimental widescreen;
+`--no-port-widescreen` explicitly selects Original. These options combine with
+`--game`. Explicit command-line display options override saved settings; the
+last display option wins. RecompLauncher writes `Display/Widescreen` as 0 or 1
+and `General/FullScreenOnPlay` in settings.ini, and passes `--game {game}`.
+Its Play action does not change `General/AutoRunOnLoad`.
+
+Ship recomplauncher.json next to Launcher.exe in the Windows ZIP. Include the
+runtime README, version and license notices; exclude ROMs, settings.ini, Saves,
+Logs, screenshots and debug files. Do not ship a player's settings as defaults.
 
 ## Source layout and authority
 

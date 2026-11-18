@@ -188,6 +188,8 @@ set_target_properties(new-horizons-launcher PROPERTIES
   OUTPUT_NAME "Launcher"
   RUNTIME_OUTPUT_DIRECTORY_RELEASE "${CMAKE_BINARY_DIR}/release"
 )
+set_property(TARGET new-horizons-launcher APPEND PROPERTY LINK_DEPENDS
+  "${NEW_HORIZONS_SOURCE_ROOT}/recomplauncher.json")
 add_custom_command(TARGET new-horizons-launcher POST_BUILD
   COMMAND "${CMAKE_COMMAND}" -E make_directory
     "$<TARGET_FILE_DIR:new-horizons-launcher>/Rom"

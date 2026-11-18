@@ -6,6 +6,7 @@
 #include <commdlg.h>
 #include <commctrl.h>
 #include <shellapi.h>
+#include "new_horizons_launch_options.h"
 
 #include "new_horizons_audio_output_dsound_win32.h"
 #include "new_horizons_frontend_settings_win32.h"
@@ -26,7 +27,7 @@
 #define APP_TITLE L"Uncharted Waters: New Horizons (SNES)"
 #define LAUNCHER_TITLE L"Launcher"
 /* Development CLI override; regular controls use the single saved setting. */
-static int g_port_wide_canvas;
+static int g_widescreen_override = -1;
 #define WM_APP_LOAD_COMPLETE (WM_APP + 1u)
 #define WM_APP_STARTUP_CONTINUE (WM_APP + 2u)
 #define HOST_TIMER_100NS_PER_SECOND 10000000u
@@ -91,6 +92,7 @@ static int g_port_wide_canvas;
 #define ID_AUDIO_DIAGNOSTICS 2024
 
 #define PATH_CAPACITY 4096u
+static wchar_t g_launch_game_path[PATH_CAPACITY];
 #define AUDIO_DEFAULT_DEVICE_LABEL L"Default Windows audio device"
 #define ARRAY_COUNT(a) (sizeof(a) / sizeof((a)[0]))
 
@@ -1483,7 +1485,7 @@ static void show_key_bindings(void) {
 
 static const wchar_t g_welcome_text[] =
     L"Uncharted Waters: New Horizons (SNES)\r\n"
-    L"Version 1.0.0\r\n\r\n"
+    L"Version 1.0.1\r\n\r\n"
     L"Wide Screen Feature:\r\n"
     L"This experimental addition has undergone several rounds of testing to address "
     L"visual issues, including menu placement. However, because of the game's size, "
@@ -3309,7 +3311,8 @@ static void initialize_paths_and_settings(void) {
         !unified_exists && GetFileAttributesW(legacy_frontend_ini) !=
             INVALID_FILE_ATTRIBUTES ? legacy_frontend_ini :
                                       g_settings_ini_path);
-    if (g_port_wide_canvas) g_frontend_settings.widescreen = 1;
+    if (g_widescreen_override >= 0)
+        g_frontend_settings.widescreen = g_widescreen_override;
     new_horizons_audio_settings_load(
         &g_audio_settings,
         !unified_exists && GetFileAttributesW(legacy_audio_ini) !=
@@ -3371,7 +3374,10 @@ static void continue_startup_after_welcome(void) {
     if (!g_startup_pending) return;
     g_startup_pending = 0;
     reset_pacing_clock();
-    if (g_adjacent_rom_found) {
+    if (g_launch_game_path[0]) {
+        SetWindowTextW(g_rom_path, g_launch_game_path);
+        start_rom_load(1);
+    } else if (g_adjacent_rom_found) {
         if (g_frontend_settings.auto_run_on_load) {
             set_status(L"ROM found in the Rom folder. Loading and starting Uncharted Waters: New Horizons.");
             start_rom_load(1);
@@ -3581,7 +3587,7 @@ static LRESULT CALLBACK window_proc(HWND window, UINT message,
                         static const wchar_t about[] =
                             L"F1 - Open the Welcome window\r\n\r\n"
                             L"Uncharted Waters: New Horizons (SNES) Static Recompilation\r\n"
-                            L"Version 1.0.0\r\n\r\n"
+                            L"Version 1.0.1\r\n\r\n"
                             L"Title: Uncharted Waters: New Horizons\r\n"
                             L"Region: USA/Canada NTSC\r\n"
                             L"File types: .sfc, .smc";
@@ -3782,6 +3788,27 @@ int WINAPI wWinMain(_In_ HINSTANCE instance, _In_opt_ HINSTANCE previous,
     headless_result = nh_snapshot_roundtrip_cli();
     if (headless_result >= 0) return headless_result;
     (void)previous;
+    (void)command_line;
+    {
+        int argc;
+        LPWSTR *argv = CommandLineToArgvW(GetCommandLineW(), &argc);
+        NewHorizonsLaunchOptions options;
+        const wchar_t *error = argv ?
+            new_horizons_parse_launch_options(argc, argv, &options) :
+            L"Unable to read command-line arguments.";
+        if (!error) {
+            g_widescreen_override = options.widescreen;
+            if (options.game_path) {
+                DWORD count = GetFullPathNameW(options.game_path, PATH_CAPACITY,
+                                               g_launch_game_path, NULL);
+                if (!count || count >= PATH_CAPACITY)
+                    error = L"The --game ROM path is invalid or too long.";
+            }
+        }
+        if (error) MessageBoxW(NULL, error, APP_TITLE, MB_OK | MB_ICONERROR);
+        if (argv) LocalFree(argv);
+        if (error) return 2;
+    }
 
     g_instance = instance;
     {
@@ -3790,9 +3817,6 @@ int WINAPI wWinMain(_In_ HINSTANCE instance, _In_opt_ HINSTANCE previous,
         controls.dwICC = ICC_BAR_CLASSES;
         if (!InitCommonControlsEx(&controls)) return 1;
     }
-    g_port_wide_canvas = command_line &&
-        (wcscmp(command_line, L"--port-wide-canvas") == 0 ||
-         wcscmp(command_line, L"--port-widescreen") == 0);
     (void)show_command;
     if (!QueryPerformanceFrequency(&g_qpc_frequency) ||
         g_qpc_frequency.QuadPart <= 0) return 1;
@@ -3871,7 +3895,7 @@ int WINAPI wWinMain(_In_ HINSTANCE instance, _In_opt_ HINSTANCE previous,
     ShowWindow(g_window, SW_SHOWNORMAL);
     UpdateWindow(g_window);
     g_startup_pending = 1;
-    if (!g_frontend_settings.welcome_shown) {
+    if (!g_launch_game_path[0] && !g_frontend_settings.welcome_shown) {
         show_getting_started_window(1);
     } else {
         continue_startup_after_welcome();
